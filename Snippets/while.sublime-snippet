@@ -1,6 +1,6 @@
 <snippet>
 	<content><![CDATA[while ${1:true} do
-	${0}
+	${0:$SELECTION}
 end]]></content>
 	<tabTrigger>while</tabTrigger>
 	<scope>source.luae</scope>

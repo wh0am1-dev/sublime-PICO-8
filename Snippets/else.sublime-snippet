@@ -1,6 +1,6 @@
 <snippet>
 	<content><![CDATA[else
-	${0}
+	${0:$SELECTION}
 end]]></content>
 	<tabTrigger>else</tabTrigger>
 	<scope>source.luae</scope>

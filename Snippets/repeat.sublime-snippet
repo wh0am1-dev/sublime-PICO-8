@@ -1,6 +1,6 @@
 <snippet>
 	<content><![CDATA[repeat
-	${0}
+	${0:$SELECTION}
 until ${1:false}]]></content>
 	<tabTrigger>repeat</tabTrigger>
 	<scope>source.luae</scope>
