@@ -8,9 +8,9 @@
 	<key>settings</key>
 	<dict>
 		<key>decreaseIndentPattern</key>
-		<string>^\s*(elseif|else|end|until|\}\;?)\s*$</string>
+		<string>^.*(elseif|else|end|until|\}\;?).*$</string>
 		<key>increaseIndentPattern</key>
-		<string>^\s*(else|elseif|for|(local\s+)?function|if|repeat|while)\b((?!end).)*$|^.*\{\s*$</string>
+		<string>^.*(else|(local\s+)?function|repeat)\b((?!end).)*$|^.*(\{|do|then)\b((?!end).)*$</string>
 	</dict>
 </dict>
 </plist>
