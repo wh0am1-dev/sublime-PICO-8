@@ -5,13 +5,13 @@
 		// Constants
 		"_G",
 		"_VERSION",
-		"package_cpath",
-		"package_loaded",
-		"package_loaders",
-		"package_path",
-		"package_preload",
-		"math_pi",
-		"math_huge",
+		{ "trigger": "package_cpath", "contents": "package.cpath" },
+		{ "trigger": "package_loaded", "contents": "package.loaded" },
+		{ "trigger": "package_loaders", "contents": "package.loaders" },
+		{ "trigger": "package_path", "contents": "package.path" },
+		{ "trigger": "package_preload", "contents": "package.preload" },
+		{ "trigger": "math_pi", "contents": "math.pi" },
+		{ "trigger": "math_huge", "contents": "math.huge" },
 
 		// No-arg functions
 		{ "trigger": "coroutine_running()", "contents": "coroutine.running()" },
