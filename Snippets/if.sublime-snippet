@@ -1,8 +1,8 @@
 <snippet>
-	<content><![CDATA[if ${1:foo} ${2:==} ${3:bar} then
+	<content><![CDATA[if ${1:foo} then
 	${0}
 end]]></content>
 	<tabTrigger>if</tabTrigger>
 	<scope>source.luae</scope>
-	<description>if a == b then</description>
+	<description>if x then</description>
 </snippet>
