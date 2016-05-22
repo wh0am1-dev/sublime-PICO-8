@@ -8,9 +8,10 @@
 	<key>settings</key>
 	<dict>
 		<key>decreaseIndentPattern</key>
-		<string>^.*(elseif|else|end|until|\}\;?).*$</string>
+		<string>(^.*(elseif|else|end|until).*$|^((?!\{).)*\}\;?.*$)</string>
+
 		<key>increaseIndentPattern</key>
-		<string>^.*(else|(local\s+)?function|repeat)\b((?!end).)*$|^.*(\{|do|then)\b((?!end).)*$</string>
+		<string>(^.*(else|(local\s+)?function|repeat)\b((?!end).)*$|^.*(do|then)\b((?!end).)*$|^.*\{((?!\}).)*$)</string>
 	</dict>
 </dict>
 </plist>
