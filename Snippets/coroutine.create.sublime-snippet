@@ -1,6 +1,0 @@
-<snippet>
-	<content><![CDATA[coroutine.create( ${1:function} )]]></content>
-	<tabTrigger>coroutine.create</tabTrigger>
-	<scope>source.luae</scope>
-	<description>coroutine.create</description>
-</snippet>
