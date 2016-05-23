@@ -1,11 +1,11 @@
 <snippet>
 	<content><![CDATA[--- ${3:Describe what $1 does (e.g. launches a nyan cat missile)}
 -- @param ${2/,\s*/ description\n-- @param /g} description
--- @returns ${4:nil}
+-- @return ${4:nil}
 function ${1:function_name}( ${2:...} )
 	${0:-- body}
 end]]></content>
 	<tabTrigger>dfun</tabTrigger>
 	<scope>source.luae</scope>
-	<description>documented function</description>
+	<description>LDoc function</description>
 </snippet>
