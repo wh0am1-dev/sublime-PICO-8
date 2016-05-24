@@ -26,3 +26,26 @@ As of right now, LuaExtended contains the following improvements over the defaul
 
 # Installation
 Simply clone this repository into your `Data/User` folder (either in the install directory, in `%appdata%/Sublime Text 3` on Windoze, or wherever else other environments put it).
+
+# LuaExtended and Linters
+If you are using a SublimeLinter3-based linter such as [SublimeLinter-lua](https://github.com/SublimeLinter/SublimeLinter-lua), you will need to edit it manually to get LuaExtended linting work.
+
+Start with locating the linter's package file in `C:\Users\<username>\AppData\Roaming\Sublime Text 3\Installed Packages`, and opening it with an archive manager such as 7Zip (`sublime-package` files are in fact Zip archives).
+
+![](https://i.imgur.com/a3YrGjo.png)
+
+If you haven't already, set the View/Edit functions of 7Zip to use your favourite editor. Go to Tools/Options, click on the Editor tab and browse for your editor's executable. Then accept the changes with OK.
+
+![](https://i.imgur.com/FPbi066.png) 
+
+Finally right-click the linter.py file in the archive's root and select "Edit".
+
+![](https://i.imgur.com/iCU6p7C.png)
+
+Once in Sublime Text, locate the line that says `syntax = 'lua'`, and change it to `syntax = ('lua', 'luae')`. This will ensure the Lua syntax is still linted, and LuaExtended as well.  
+
+![](https://i.imgur.com/UJaZve0.png)
+
+Save the changes. 7Zip will ask you whether to apply the changes to the archive, select "Yes".
+
+And there you go! Try opening a `*.luae`, `*.ext.lua` or `*.extended.lua` file and see whether linting works. If it for some reason doesn't work, read the tutorial again and check that you've followed it to the point. Sometimes, 7Zip will fail to notice the file has changed after saving it in the editor, but you can always extract the whole archive, edit it and then pack it as a Zip again.
