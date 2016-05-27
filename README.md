@@ -42,9 +42,9 @@ Finally right-click the linter.py file in the archive's root and select "Edit".
 
 ![](https://i.imgur.com/iCU6p7C.png)
 
-Once in Sublime Text, locate the line that says `syntax = 'lua'`, and change it to `syntax = ('lua', 'luae')`. This will ensure the Lua syntax is still linted, and LuaExtended as well.  
+Once in Sublime Text, locate the line that says `syntax = 'lua'`, and change it to `syntax = ('lua', 'luaextended')`. This will ensure the Lua syntax is still linted, and LuaExtended as well.  
 
-![](https://i.imgur.com/UJaZve0.png)
+![](https://i.imgur.com/W2ldXl2.png)
 
 Save the changes. 7Zip will ask you whether to apply the changes to the archive, select "Yes".
 
