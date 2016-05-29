@@ -19,7 +19,8 @@ As of right now, LuaExtended contains the following improvements over the defaul
 	* `if`, `elseif` and `else`
 	* `if~`, `if=`, and their `elseif` counterparts, expanding to `if x ~= y then ...` and similar
 	* Most snippets also handle selection, meaning you can e.g. apply `while` on a block of code which will then become the body of the `while` loop
-* Function calls (including object method invocations `foo:bar()`) are highlighted properly
+* Function calls (including object method invocations `foo:bar()` and syntactic sugar like `foo { bar }`) are highlighted properly
+* Anonymous function definitions are highlighted properly (arguments are formatted)
 * Restructured indent settings
 	* `do end` blocks are indented properly
 * All features are grouped under the `source.luae` scope, so that they don't interfere with the default Lua package
