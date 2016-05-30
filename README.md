@@ -5,9 +5,15 @@ LuaExtended is a syntax definition and snippet package for Sublime Text 3 (it sh
 As of right now, LuaExtended contains the following improvements over the default Lua package:
 
 * Indentation of `repeat until` loops fixed
+
+	![](https://i.imgur.com/mhi7Ok2.gif)
 * Indentation of table definitions fixed
+
+	![](https://i.imgur.com/4H0GnEA.gif)
 * Improved syntax definition structure for easier future work on more fixes
 * `error` calls have red-highlighted strings
+
+	![](https://i.imgur.com/irGZUPb.png)
 * Completions include the full standard library, including parameter names with tab stops
 
 	![](https://i.imgur.com/QnIQyNG.gif)
@@ -36,9 +42,15 @@ As of right now, LuaExtended contains the following improvements over the defaul
 		![](https://i.imgur.com/Yac7RFk.gif)
 	* Most snippets also handle selection, meaning you can e.g. apply `while` on a block of code which will then become the body of the `while` loop
 * Function calls (including object method invocations `foo:bar()` and syntactic sugar like `foo { bar }`) are highlighted properly
+
+	![](https://i.imgur.com/kCJvy4j.png)
 * Anonymous function definitions are highlighted properly (arguments are formatted)
+
+	![](https://i.imgur.com/aOQZYE2.png)
 * Restructured indent settings
 	* `do end` blocks are indented properly
+
+		![](https://i.imgur.com/0DG2QRe.gif)
 * All features are grouped under the `source.luae` scope, so that they don't interfere with the default Lua package
 
 # Installation
