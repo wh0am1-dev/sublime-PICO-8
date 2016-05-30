@@ -1,8 +1,8 @@
 <snippet>
-	<content><![CDATA[--- ${3:Describe what $1 does (e.g. launches a nyan cat missile)}
--- @param ${2/,\s*/ description\n-- @param /g} description
--- @return ${4:nil}
-function ${1:function_name}( ${2:...} )
+	<content><![CDATA[--- ${4:Describe what $2 does (e.g. launches a nyan cat missile)}
+-- @param ${3/,\s*/ description\n-- @param /g} description
+-- @return ${5:nil}
+${1:local }function ${2:function_name}( ${3:...} )
 	${0:-- body}
 end]]></content>
 	<tabTrigger>dfun</tabTrigger>
