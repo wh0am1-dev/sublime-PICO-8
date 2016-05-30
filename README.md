@@ -9,23 +9,31 @@ As of right now, LuaExtended contains the following improvements over the defaul
 * Improved syntax definition structure for easier future work on more fixes
 * `error` calls have red-highlighted strings
 * Completions include the full standard library, including parameter names with tab stops
-![](https://i.imgur.com/QnIQyNG.gif)
+
+	![](https://i.imgur.com/QnIQyNG.gif)
 * Completions also include Lua keywords 
 * New snippets:
 	* New loop snippets (`while` and `repeat`)
-	![](https://i.imgur.com/ThhEdZX.gif)
+
+		![](https://i.imgur.com/ThhEdZX.gif)
 	* Improved indentation of `for` snippets, synced variable name tab stops
-	![](https://i.imgur.com/cKSW2ny.gif)
+
+		![](https://i.imgur.com/cKSW2ny.gif)
 	* `++` (expands the current line into the form of `line = line + 1`, ignoring inline comments and whitespace)
-	![](https://i.imgur.com/gbJ3969.gif)
+
+		![](https://i.imgur.com/gbJ3969.gif)
 	* `+=` and `-=`
-	![](https://i.imgur.com/7gATWIz.gif)
+
+		![](https://i.imgur.com/7gATWIz.gif)
 	* `dfun`, an LDoc-style documented function snippet
-	![](https://i.imgur.com/FVXVTb6.gif)
+
+		![](https://i.imgur.com/FVXVTb6.gif)
 	* `if`, `elseif` and `else`
-	![](https://i.imgur.com/xVoBQIQ.gif)
+
+		![](https://i.imgur.com/xVoBQIQ.gif)
 	* `if~`, `if=`, and their `elseif` counterparts, expanding to `if x ~= y then ...` and similar
-	![](https://i.imgur.com/Yac7RFk.gif)
+
+		![](https://i.imgur.com/Yac7RFk.gif)
 	* Most snippets also handle selection, meaning you can e.g. apply `while` on a block of code which will then become the body of the `while` loop
 * Function calls (including object method invocations `foo:bar()` and syntactic sugar like `foo { bar }`) are highlighted properly
 * Anonymous function definitions are highlighted properly (arguments are formatted)
