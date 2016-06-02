@@ -57,24 +57,22 @@ As of right now, LuaExtended contains the following improvements over the defaul
 Simply clone this repository into your `Data/User` folder (either in the install directory, in `%appdata%/Sublime Text 3` on Windoze, or wherever else other environments put it).
 
 # LuaExtended and Linters
-If you are using a SublimeLinter3-based linter such as [SublimeLinter-lua](https://github.com/SublimeLinter/SublimeLinter-lua), you will need to edit it manually to get LuaExtended linting work.
+If you are using a SublimeLinter3-based linter such as [SublimeLinter-lua](https://github.com/SublimeLinter/SublimeLinter-lua), you will need to modify your settings to get LuaExtended linting to work.
 
-Start with locating the linter's package file in `C:\Users\<username>\AppData\Roaming\Sublime Text 3\Installed Packages`, and opening it with an archive manager such as 7Zip (`sublime-package` files are in fact Zip archives).
+Navigate to Preferences > Package Settings
 
-![](https://i.imgur.com/a3YrGjo.png)
+![](https://i.imgur.com/CIiMwB6.png)
 
-If you haven't already, set the View/Edit functions of 7Zip to use your favourite editor. Go to Tools/Options, click on the Editor tab and browse for your editor's executable. Then accept the changes with OK.
+Find SublimeLinter in the list and open its "Settings - User"
 
-![](https://i.imgur.com/FPbi066.png) 
+![](https://i.imgur.com/8oWbfOI.png)
 
-Finally right-click the linter.py file in the archive's root and select "Edit".
+The settings file is of the JSON format, so look for the that says `"syntax_map": {`
 
-![](https://i.imgur.com/iCU6p7C.png)
+![](https://i.imgur.com/BYM6QYB.png)
 
-Once in Sublime Text, locate the line that says `syntax = 'lua'`, and change it to `syntax = ('lua', 'luaextended')`. This will ensure the Lua syntax is still linted, and LuaExtended as well.  
+You will need to add a binding that tells SublimeLinter to lint LuaExtended just like Lua. This is done by adding a line that says `"luaextended": "lua",`. Don't worry about the alphabetical order of the entries, SublimeLinter will sort them on next reload.
 
-![](https://i.imgur.com/W2ldXl2.png)
+![](https://i.imgur.com/7LOKYXF.png)
 
-Save the changes. 7Zip will ask you whether to apply the changes to the archive, select "Yes".
-
-And there you go! Try opening a `*.luae`, `*.ext.lua` or `*.extended.lua` file and see whether linting works. If it for some reason doesn't work, read the tutorial again and check that you've followed it to the point. Sometimes, 7Zip will fail to notice the file has changed after saving it in the editor, but you can always extract the whole archive, edit it and then pack it as a Zip again.
+And there you go! Try opening a `*.luae`, `*.ext.lua` or `*.extended.lua` file and see whether linting works. If it for some reason doesn't work, read the tutorial again and check that you've followed it to the point. Try restarting Sublime before opening an issue!
