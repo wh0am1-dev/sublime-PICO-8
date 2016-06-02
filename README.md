@@ -67,7 +67,7 @@ Find SublimeLinter in the list and open its "Settings - User"
 
 ![](https://i.imgur.com/8oWbfOI.png)
 
-The settings file is of the JSON format, so look for the that says `"syntax_map": {`
+The settings file is of the JSON format, so look for the line that says `"syntax_map": {`
 
 ![](https://i.imgur.com/BYM6QYB.png)
 
