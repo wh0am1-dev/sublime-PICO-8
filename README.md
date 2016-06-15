@@ -54,7 +54,7 @@ As of right now, LuaExtended contains the following improvements over the defaul
 * All features are grouped under the `source.luae` scope, so that they don't interfere with the default Lua package
 
 # Installation
-Simply type "install" in the Command Palette (<kbd>Ctrl + Shift + P</kbd>) to [find](https://i.imgur.com/XnYlj0y.gif) the [`Package Control: Install Package`](https://packagecontrol.io/docs/usage) command. Wait for the repository lists to load
+You can now use [Package Control](https://packagecontrol.io/) to install [LuaExtended](https://packagecontrol.io/packages/LuaExtended). Simply type "install" in the Command Palette (<kbd>Ctrl + Shift + P</kbd>) to [find](https://i.imgur.com/XnYlj0y.gif) the [`Package Control: Install Package`](https://packagecontrol.io/docs/usage) command. Wait for the repository lists to load
 
 ![](https://i.imgur.com/tyDRMgP.png)
 
