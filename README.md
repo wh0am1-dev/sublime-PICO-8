@@ -54,7 +54,11 @@ As of right now, LuaExtended contains the following improvements over the defaul
 * All features are grouped under the `source.luae` scope, so that they don't interfere with the default Lua package
 
 # Installation
-Simply clone this repository into your `Data/User` folder (either in the install directory, in `%appdata%/Sublime Text 3` on Windoze, or wherever else other environments put it).
+Simply type "install" in the Command Palette (<kbd>Ctrl + Shift + P</kbd>) to [find](https://i.imgur.com/XnYlj0y.gif) the [`Package Control: Install Package`](https://packagecontrol.io/docs/usage) command. Wait for the repository lists to load
+
+![](https://i.imgur.com/tyDRMgP.png)
+
+and search for 'LuaExtended'. Alternatively, you can clone this repository into your `Data/User` folder (either in the install directory, in `%appdata%/Sublime Text 3` on Windoze, or wherever else other environments put it).
 
 # LuaExtended and Linters
 If you are using a SublimeLinter3-based linter such as [SublimeLinter-lua](https://github.com/SublimeLinter/SublimeLinter-lua), you will need to modify your settings to get LuaExtended linting to work.
