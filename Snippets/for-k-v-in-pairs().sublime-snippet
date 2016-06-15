@@ -3,6 +3,6 @@
 	${0:print( $1, $2 )}
 end]]></content>
 	<tabTrigger>forp</tabTrigger>
-	<scope>source.luae</scope>
+	<scope>source.luae - string</scope>
 	<description>for k, v in pairs()</description>
 </snippet>

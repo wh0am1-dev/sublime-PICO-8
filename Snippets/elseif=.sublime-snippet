@@ -3,6 +3,6 @@
 	${0:$SELECTION}
 ${3:end}]]></content>
 	<tabTrigger>elseif=</tabTrigger>
-	<scope>source.luae</scope>
+	<scope>source.luae - string</scope>
 	<description>elseif a == b then</description>
 </snippet>
