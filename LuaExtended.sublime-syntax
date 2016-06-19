@@ -93,21 +93,21 @@ contexts:
     - include: main
   # Error call strings
   error_string_quoted_single:
-    - meta_scope: message.error
+    - meta_scope: sublimelinter.mark.error
     - match: "'"
       captures:
         0: punctuation.definition.string.end.lua
       pop: true
     - include: string
   error_string_quoted_double:
-    - meta_scope: message.error
+    - meta_scope: sublimelinter.mark.error
     - match: '"'
       captures:
         0: punctuation.definition.string.end.lua
       pop: true
     - include: string
   error_string_quoted_multiline:
-    - meta_scope: message.error
+    - meta_scope: sublimelinter.mark.error
     - match: '\]\1\]'
       captures:
         0: punctuation.definition.string.end.lua
