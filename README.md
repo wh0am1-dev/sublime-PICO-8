@@ -1,5 +1,7 @@
 # What is this?
-LuaExtended is a syntax definition and snippet package for Sublime Text 3 (it should theoretically work with ST2 as well, but I didn't test it).
+LuaExtended is a syntax definition and snippet package for Sublime Text 3.
+
+[![Package Control](https://img.shields.io/packagecontrol/dt/LuaExtended.svg?maxAge=2592000)](https://packagecontrol.io/packages/LuaExtended)
 
 # Features
 As of right now, LuaExtended contains the following improvements over the default Lua package:
