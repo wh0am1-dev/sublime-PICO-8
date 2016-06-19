@@ -1,7 +1,10 @@
 # What is this?
 LuaExtended is a syntax definition and snippet package for Sublime Text 3.
 
-[![Package Control](https://img.shields.io/packagecontrol/dt/LuaExtended.svg?maxAge=2592000)](https://packagecontrol.io/packages/LuaExtended) [![license](https://img.shields.io/github/license/viluon/LuaExtended.svg?maxAge=2592000)](https://github.com/viluon/LuaExtended/blob/master/LICENSE.md) [![GitHub release](https://img.shields.io/github/release/viluon/LuaExtended.svg?maxAge=2592000)](https://github.com/viluon/LuaExtended/releases)[![GitHub stars](https://img.shields.io/github/stars/viluon/LuaExtended.svg?style=social&label=Star&maxAge=2592000)](https://github.com/viluon/LuaExtended/stargazers)
+[![Package Control](https://img.shields.io/packagecontrol/dt/LuaExtended.svg?maxAge=2592000)](https://packagecontrol.io/packages/LuaExtended)
+[![license](https://img.shields.io/github/license/viluon/LuaExtended.svg?maxAge=2592000)](https://github.com/viluon/LuaExtended/blob/master/LICENSE.md)
+[![GitHub release](https://img.shields.io/github/release/viluon/LuaExtended.svg?maxAge=2592000)](https://github.com/viluon/LuaExtended/releases)
+[![GitHub stars](https://img.shields.io/github/stars/viluon/LuaExtended.svg?style=social&label=Star&maxAge=2592000)](https://github.com/viluon/LuaExtended/stargazers)
 
 # Features
 As of right now, LuaExtended contains the following improvements over the default Lua package:
