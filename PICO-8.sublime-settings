@@ -1,0 +1,13 @@
+{
+    "color_scheme": "Packages/PICO-8/PICO-8.tmTheme",
+    "tab_size": 1,
+    "translate_tabs_to_spaces": true,
+    "detect_indentation": false,
+    "font_size": 15,
+    "font_face": "PICO-8",
+    "font_options": ["no_antialias"],
+    "caret_extra_width": 10,
+    "caret_style": "blink",
+    "line_padding_bottom": 1,
+    "line_padding_top": 1
+}

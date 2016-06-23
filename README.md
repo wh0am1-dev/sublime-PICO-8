@@ -1,0 +1,57 @@
+# Sublime PICO-8
+
+PICO-8 plugin for the [Sublime Text 3](https://www.sublimetext.com/) editor.
+
+This package includes:
+
+- `.p8` language definition (from [Overkill](http://www.lexaloffle.com/bbs/?uid=11331)).
+- Syntax highlighting (from [Overkill](http://www.lexaloffle.com/bbs/?uid=11331)).
+- PICO-8 `.ttf` font (from [RhythmLynx](http://www.lexaloffle.com/bbs/?uid=11704))
+
+## Installation
+
+### Using [Package Control](https://packagecontrol.io/)
+
+1. Open the command palette:
+	- Linux: `ctrl+shift+p`
+	- Mac OS: `cmd+shift+p`
+	- Windows: `ctrl+shift+p`
+1. Run `Package Control: Install Package` command.
+1. Search for `PICO-8` and install it.
+1. Restart Sublime Text (if required).
+
+### Using Git
+
+Linux users:
+
+```bash
+cd ~/.config/sublime-text-3/Packages
+rm -rf PICO-8
+git clone https://github.com/Neko250/sublime-PICO-8 PICO-8
+```
+
+Mac OS users:
+
+```bash
+cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages
+rm -rf PICO-8
+git clone https://github.com/Neko250/sublime-PICO-8 PICO-8
+```
+
+Windows users:
+
+```cmd
+cd "%APPDATA%\Sublime Text 3\Packages"
+rd /s /q PICO-8
+git clone https://github.com/Neko250/sublime-PICO-8 PICO-8
+```
+
+### Manual installation
+
+1. Download the files using the GitHub `.zip` download option.
+1. Unzip the files and rename the folder to `PICO-8`.
+1. Find your `Packages` directory:
+	- Linux: `~/.config/sublime-text-3/Packages`
+	- Mac OS: `~/Library/Application Support/Sublime Text 3/Packages`
+	- Windows: `%APPDATA%\Sublime Text 3\Packages`
+1. Copy the folder into your Sublime Text `Packages` directory.
