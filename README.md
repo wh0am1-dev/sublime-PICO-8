@@ -6,9 +6,9 @@ PICO-8 plugin for the [Sublime Text 3](https://www.sublimetext.com/) editor.
 
 This package includes:
 
-- `.p8` language definition (from [Overkill](http://www.lexaloffle.com/bbs/?uid=11331)).
-- Syntax highlighting (from [Overkill](http://www.lexaloffle.com/bbs/?uid=11331)).
-- PICO-8 `.ttf` font (from [RhythmLynx](http://www.lexaloffle.com/bbs/?uid=11704))
+- `.p8` language definition (by [Overkill](http://www.lexaloffle.com/bbs/?uid=11331)).
+- Syntax highlighting (by [Overkill](http://www.lexaloffle.com/bbs/?uid=11331)).
+- PICO-8 `.ttf` font (by [RhythmLynx](http://www.lexaloffle.com/bbs/?uid=11704))
 
 To-Do:
 
