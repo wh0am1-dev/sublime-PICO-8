@@ -15,6 +15,10 @@ To-Do:
 
 ## Installation
 
+Independently of the installation method you chose, after installing, navigate to the package folder and manually install `PICO-8.ttf` to your system fonts.
+
+Alternatively, you can also download the font from this link: [PICO-8 TrueType font](https://raw.githubusercontent.com/Neko250/sublime-PICO-8/font/PICO-8.ttf).
+
 ### Using [Package Control](https://packagecontrol.io/)
 
 1. Open the command palette:
@@ -61,7 +65,7 @@ git clone https://github.com/Neko250/sublime-PICO-8 PICO-8
 	- Windows: `%APPDATA%\Sublime Text 3\Packages`
 1. Copy the folder into your Sublime Text `Packages` directory.
 
-## Versions
+## Version history
 
 - __v1.0.0__:
 	- `added`: `.p8` language definition.
