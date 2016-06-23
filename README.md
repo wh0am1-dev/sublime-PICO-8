@@ -17,7 +17,7 @@ To-Do:
 
 Independently of the installation method you chose, after installing, navigate to the package folder and manually install `PICO-8.ttf` to your system fonts.
 
-Alternatively, you can also download the font from this link: [PICO-8 TrueType font](https://raw.githubusercontent.com/Neko250/sublime-PICO-8/font/PICO-8.ttf).
+Alternatively, you can also download the font from this link: [PICO-8 TrueType font](https://github.com/Neko250/sublime-PICO-8/raw/master/font/PICO-8.ttf).
 
 ### Using [Package Control](https://packagecontrol.io/)
 
