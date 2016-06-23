@@ -8,6 +8,11 @@ This package includes:
 - Syntax highlighting (from [Overkill](http://www.lexaloffle.com/bbs/?uid=11331)).
 - PICO-8 `.ttf` font (from [RhythmLynx](http://www.lexaloffle.com/bbs/?uid=11704))
 
+To-Do:
+
+- Snippet integration based on the official PICO-8 API.
+- Add a build system to run the cartridges from Sublime Text.
+
 ## Installation
 
 ### Using [Package Control](https://packagecontrol.io/)
@@ -55,3 +60,10 @@ git clone https://github.com/Neko250/sublime-PICO-8 PICO-8
 	- Mac OS: `~/Library/Application Support/Sublime Text 3/Packages`
 	- Windows: `%APPDATA%\Sublime Text 3\Packages`
 1. Copy the folder into your Sublime Text `Packages` directory.
+
+## Versions
+
+- __v1.0.0__:
+	- `added`: `.p8` language definition.
+	- `added`: syntax highlighting.
+	- `added`: PICO-8 TrueType font.
