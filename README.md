@@ -69,6 +69,9 @@ git clone https://github.com/Neko250/sublime-PICO-8 PICO-8
 
 ## Version history
 
+- __v1.1.0__:
+	- `added`: installation message
+
 - __v1.0.0__:
 	- `added`: `.p8` language definition.
 	- `added`: syntax highlighting.
