@@ -44,7 +44,7 @@ git clone https://github.com/Neko250/sublime-PICO-8 PICO-8
 
 #### Windows
 
-```cmd
+```bash
 cd "%APPDATA%\Sublime Text 3\Packages"
 rd /s /q PICO-8
 git clone https://github.com/Neko250/sublime-PICO-8 PICO-8
