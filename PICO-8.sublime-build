@@ -1,0 +1,11 @@
+{
+	"linux": {
+		"cmd": ["pico8", "-run", "$file"]
+	},
+	"osx": {
+		"cmd": ["pico8", "-run", "$file"]
+	},
+	"windows": {
+		"cmd": ["pico8.exe", "-run", "$file"]
+	}
+}

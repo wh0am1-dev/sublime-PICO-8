@@ -1,12 +1,32 @@
-Sublime PICO-8
-==============
+Please, read this file to complete your installation.
 
-Thanks for installing the PICO-8 plugin for the [Sublime Text 3](https://www.sublimetext.com/) editor.
+Font installation
+=================
 
-Complete Installation
----------------------
-
-Before starting using this package, navigate to the package folder and manually install PICO-8.ttf to your system fonts.
-
-Alternatively, you can also download the font from this link:
+Before starting using this package, you'll need to install PICO-8.ttf to your system fonts. You can download the font from this link:
 https://raw.githubusercontent.com/Neko250/sublime-PICO-8/master/font/PICO-8.ttf
+
+Test different font sizes until you find one that goes well with your screen resolution !
+
+Build system setup
+==================
+
+Linux
+-----
+Execute this command in the terminal:
+"sudo ln -s /path/to/your/pico8 /usr/local/bin"
+
+OSX
+---
+Execute this command in Terminal.app:
+"sudo ln -s /path/to/your/PICO-8.app/Contents/MacOS/pico8 /usr/local/bin"
+
+Windows
+-------
+1. Navigate to: "Control Panel > System > Advanced System Settings > Environment Variables".
+2. Edit the "Path" variable under "User variables".
+3. Add your PICO-8 installation path (default: "C:\Program Files (x86)\PICO-8").
+
+================
+
+Thanks for installing the PICO-8 plugin for the Sublime Text 3 editor.
