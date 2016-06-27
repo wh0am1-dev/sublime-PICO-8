@@ -86,9 +86,9 @@ sudo ln -s /path/to/your/PICO-8.app/Contents/MacOS/pico8 /usr/local/bin
 
 ### Windows
 
-1. Navigate to: "Control Panel > System > Advanced System Settings > Environment Variables".
-1. Edit the "Path" variable under "User variables".
-1. Add your PICO-8 installation path (default: "C:\Program Files (x86)\PICO-8").
+1. Navigate to: `Control Panel > System > Advanced System Settings > Environment Variables`.
+1. Edit the `Path` variable under `User variables`.
+1. Add your PICO-8 installation path (default: `C:\Program Files (x86)\PICO-8`).
 
 ## Version History
 
