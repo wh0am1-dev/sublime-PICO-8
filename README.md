@@ -92,6 +92,9 @@ sudo ln -s /path/to/your/PICO-8.app/Contents/MacOS/pico8 /usr/local/bin
 
 ## Version History
 
+- __v1.2.1:
+	- `removed`: `.no-sublime-package`.
+
 - __v1.2.0__:
 	- `added`: build system.
 	- `changed`: installation message.
