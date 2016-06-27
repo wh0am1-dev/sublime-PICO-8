@@ -92,19 +92,19 @@ sudo ln -s /path/to/your/PICO-8.app/Contents/MacOS/pico8 /usr/local/bin
 
 ## Version History
 
-- __v1.2.1__:
+- __v0.0.3__:
 	- `removed`: `.no-sublime-package`.
 
-- __v1.2.0__:
+- __v0.0.2__:
 	- `added`: build system.
 	- `changed`: installation message.
 	- `changed`: font size no longer predefined.
 	- `changed`: caret width no longer predefined.
 
-- __v1.1.0__:
+- __v0.0.1__:
 	- `added`: installation message.
 
-- __v1.0.0__:
+- __v0.0.0__:
 	- `added`: `.p8` language definition.
 	- `added`: syntax highlighting.
 	- `added`: PICO-8 TrueType font.
