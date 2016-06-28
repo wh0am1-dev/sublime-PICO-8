@@ -10,10 +10,8 @@ This package includes:
 - Syntax highlighting (by [Overkill](http://www.lexaloffle.com/bbs/?uid=11331)).
 - PICO-8 `.ttf` font (by [RhythmLynx](http://www.lexaloffle.com/bbs/?uid=11704)).
 - Build system to run the cartridges from Sublime Text.
-
-To-Do:
-
-- Snippet integration based on the official PICO-8 API.
+- Code completion based on the official PICO-8 API.
+- Code snippets.
 
 ## Installation
 
@@ -91,6 +89,12 @@ sudo ln -s /path/to/your/PICO-8.app/Contents/MacOS/pico8 /usr/local/bin
 1. Add your PICO-8 installation path (default: `C:\Program Files (x86)\PICO-8`).
 
 ## Version History
+
+- __v0.1.8__:
+	- `added`: snippet library.
+	- `added`: code completion.
+	- `changed`: changed version to match PICO-8.
+	- `fixed`: completed `.tmLanguage` functions.
 
 - __v0.0.3__:
 	- `removed`: `.no-sublime-package`.

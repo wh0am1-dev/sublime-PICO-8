@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+function _update()
+ ${1}
+end
+]]></content>
+	<tabTrigger>update</tabTrigger>
+	<scope>source.p8</scope>
+	<description>_update()</description>
+</snippet>

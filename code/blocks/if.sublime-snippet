@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+if ${1:condition} then
+ ${2}
+end
+]]></content>
+	<tabTrigger>if</tabTrigger>
+	<scope>source.p8</scope>
+	<description>if</description>
+</snippet>

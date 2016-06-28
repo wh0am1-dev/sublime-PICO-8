@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+while ${1:condition} do
+ ${2}
+end
+]]></content>
+	<tabTrigger>while</tabTrigger>
+	<scope>source.p8</scope>
+	<description>while</description>
+</snippet>

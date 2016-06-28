@@ -1,3 +1,4 @@
+Thanks for installing the PICO-8 plugin for the Sublime Text 3 editor.
 Please, read this file to complete your installation.
 
 Font installation
@@ -26,7 +27,3 @@ Windows
 1. Navigate to: "Control Panel > System > Advanced System Settings > Environment Variables".
 2. Edit the "Path" variable under "User variables".
 3. Add your PICO-8 installation path (default: "C:\Program Files (x86)\PICO-8").
-
-================
-
-Thanks for installing the PICO-8 plugin for the Sublime Text 3 editor.

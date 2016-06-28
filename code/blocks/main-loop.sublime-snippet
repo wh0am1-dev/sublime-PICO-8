@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+function _init() end
+function _update() end
+function _draw() end
+]]></content>
+	<tabTrigger>main</tabTrigger>
+	<scope>source.p8</scope>
+	<description>main loop</description>
+</snippet>

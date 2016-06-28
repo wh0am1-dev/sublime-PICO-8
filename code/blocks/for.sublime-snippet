@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+for ${1:var}=${2:first},${3:last},${4:incr} do
+ ${5}
+end
+]]></content>
+	<tabTrigger>for</tabTrigger>
+	<scope>source.p8</scope>
+	<description>for</description>
+</snippet>

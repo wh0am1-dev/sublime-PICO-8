@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+else
+ ${1}
+end
+]]></content>
+	<tabTrigger>else</tabTrigger>
+	<scope>source.p8</scope>
+	<description>else</description>
+</snippet>

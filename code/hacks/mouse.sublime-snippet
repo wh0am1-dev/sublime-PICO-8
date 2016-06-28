@@ -1,0 +1,11 @@
+<snippet>
+	<content><![CDATA[
+poke(0x5f2d,1)
+x = stat(32)
+y = stat(33)
+mb = stat(34)
+]]></content>
+	<tabTrigger>mouse</tabTrigger>
+	<scope>source.p8</scope>
+	<description>mouse hack</description>
+</snippet>

@@ -1,0 +1,12 @@
+<snippet>
+	<content><![CDATA[
+if ${1:condition} then
+ ${2}
+else
+ ${3}
+end
+]]></content>
+	<tabTrigger>ifelse</tabTrigger>
+	<scope>source.p8</scope>
+	<description>if-else</description>
+</snippet>

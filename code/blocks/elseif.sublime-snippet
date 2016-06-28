@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+elseif ${1:condition} then
+ ${2}
+end
+]]></content>
+	<tabTrigger>elseif</tabTrigger>
+	<scope>source.p8</scope>
+	<description>elseif</description>
+</snippet>
