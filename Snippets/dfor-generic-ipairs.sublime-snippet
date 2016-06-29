@@ -1,0 +1,9 @@
+<snippet>
+	<content><![CDATA[-- ${4:Describe what this loop does (e.g. draws nyan cats from $3)}
+for ${1:i}, ${2:v} in ipairs( ${3:table_name} ) do
+	${0:print( $1, $2 )}
+end]]></content>
+	<tabTrigger>dfori</tabTrigger>
+	<scope>source.luae - string</scope>
+	<description>Documented for i, v in ipairs()</description>
+</snippet>
