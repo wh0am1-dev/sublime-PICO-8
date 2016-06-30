@@ -4,26 +4,19 @@ Please, read this file to complete your installation.
 Font installation
 =================
 
-Before starting using this package, you'll need to install PICO-8.ttf to your system fonts. You can download the font from this link:
-https://raw.githubusercontent.com/Neko250/sublime-PICO-8/master/font/PICO-8.ttf
+Before starting using this package, you'll need to install PICO-8.ttf to your system fonts.
+To download the font, open the Command Palette in Sublime Text (ctrl+shift+p / cmd+shift+p) and run "PICO-8: Download Font".
+Restart Sublime Text and test different font sizes until you find one that goes well with your screen resolution !
 
-Test different font sizes until you find one that goes well with your screen resolution !
+Cartridge runner setup
+======================
 
-Build system setup
-==================
+To setup the Cartridge Runner, open the Command Palette in Sublime Text (ctrl+shift+p / cmd+shift+p) and run "PICO-8: Setup PICO-8 Path".
+Then enter the path to your PICO-8 executable in the prompt input.
 
-Linux
------
-Execute this command in the terminal:
-"sudo ln -s /path/to/your/pico8 /usr/local/bin"
+Defaults to:
+  Linux:   "/there/is/no/default/in/linux/shrug/pico8"
+  OSX:     "/Applications/PICO-8.app/Contents/MacOS/pico8"
+  Windows: "C:\\Program Files (x86)\\PICO-8\\pico8.exe"
 
-OSX
----
-Execute this command in Terminal.app:
-"sudo ln -s /path/to/your/PICO-8.app/Contents/MacOS/pico8 /usr/local/bin"
-
-Windows
--------
-1. Navigate to: "Control Panel > System > Advanced System Settings > Environment Variables".
-2. Edit the "Path" variable under "User variables".
-3. Add your PICO-8 installation path (default: "C:\Program Files (x86)\PICO-8").
+IMPORTANT: Remember using the escape character for the backslash ("\\") instead of a single one ("\") in Windows !!!

@@ -9,9 +9,11 @@ This package includes:
 - `.p8` language definition (by [Overkill](http://www.lexaloffle.com/bbs/?uid=11331)).
 - Syntax highlighting (by [Overkill](http://www.lexaloffle.com/bbs/?uid=11331)).
 - PICO-8 `.ttf` font (by [RhythmLynx](http://www.lexaloffle.com/bbs/?uid=11704)).
-- Build system to run the cartridges from Sublime Text.
-- Code completion based on the official PICO-8 API.
+- Cartridge runner to launch your cart right from Sublime Text.
+- Code completion based on the official [PICO-8 API](http://neko250.github.io/pico8-api/).
 - Code snippets.
+
+----
 
 ## Installation
 
@@ -20,7 +22,7 @@ This package includes:
 1. Open the command palette with `ctrl+shift+p` (`cmd+shift+p` in OSX).
 1. Run `Package Control: Install Package` command.
 1. Search for `PICO-8` and install it.
-1. Restart Sublime Text (if required).
+1. Restart Sublime Text.
 
 ### Using Git
 
@@ -58,37 +60,51 @@ git clone https://github.com/Neko250/sublime-PICO-8 PICO-8
 	- Windows: `%APPDATA%\Sublime Text 3\Packages`
 1. Copy the folder into your Sublime Text `Packages` directory.
 
-## Font
+----
 
-Independently of the installation method you chose, after installing you'll need to install the PICO-8 font. You can download the font from this link: [PICO-8.ttf](https://raw.githubusercontent.com/Neko250/sublime-PICO-8/master/font/PICO-8.ttf).
+## Post Installation
 
-## Build System
+### Font Setup
 
-To use the build system included with the package follow this instructions:
+Independently of the installation method you chose, after installing you'll need to setup the PICO-8 font.
 
-### Linux
+1. Open the command palette with `ctrl+shift+p` (`cmd+shift+p` in OSX).
+1. Run `PICO-8: Download Font` command.
+1. Find `PICO-8.ttf` in your downloads folder and install it.
+1. Restart Sublime Text.
 
-Execute this command in the terminal:
+Test different font sizes until you find one that goes well with your screen resolution !
 
-```bash
-sudo ln -s /path/to/your/pico8 /usr/local/bin
-```
+### Cartridge Runner Setup
 
-### OSX
+To setup the Cartridge Runner, open the Command Palette in Sublime Text (ctrl+shift+p / cmd+shift+p) and run "PICO-8: Setup PICO-8 Path".
+Then enter the path to PICO-8 in the prompt input.
 
-Execute this command in Terminal.app:
+1. Open the command palette with `ctrl+shift+p` (`cmd+shift+p` in OSX).
+1. Run `PICO-8: Setup PICO-8 Path` command.
+1. Type the path to your PICO-8 executable. Defaults to:
+	- Linux: `/there/is/no/default/in/linux/shrug/pico8`
+	- OSX: `/Applications/PICO-8.app/Contents/MacOS/pico8`
+	- Windows: `C:\\Program Files (x86)\\PICO-8\\pico8.exe`
 
-```bash
-sudo ln -s /path/to/your/PICO-8.app/Contents/MacOS/pico8 /usr/local/bin
-```
+__IMPORTANT__: Remember using the escape character for the backslash (`\\`) instead of a single one (`\`) in Windows !!!
 
-### Windows
-
-1. Navigate to: `Control Panel > System > Advanced System Settings > Environment Variables`.
-1. Edit the `Path` variable under `User variables`.
-1. Add your PICO-8 installation path (default: `C:\Program Files (x86)\PICO-8`).
+----
 
 ## Version History
+
+- __v2016.6.30__:
+	- `added`: command palette download font shortcut: `PICO-8: Download Font`.
+	- `added`: command palette preferences commands: `Preferences: PICO-8 - Default` & `Preferences: PICO-8 - User`.
+	- `added`: command palette bbs shortcut: `PICO-8: Browse BBS`.
+	- `added`: command palette API reference shortcut: `PICO-8: Browse API Reference`.
+	- `added`: `highlight_line` setting defaults to `true`.
+	- `added`: menu items to open preferences files: `Preferences > Package Settings > PICO-8`.
+	- `changed`: version system changed to tagging date.
+	- `changed`: theme's line highlight is now a bit brighter than the background.
+	- `fixed`: setup cartridge runner from the command palette: `PICO-8: Setup PICO-8 Path`.
+	- `fixed`: run cartridges from the command palette: `PICO-8: Run Cartridge`.
+	- `removed`: old build system: `PICO-8.sublime-build`.
 
 - __v0.1.8__:
 	- `added`: snippet library.

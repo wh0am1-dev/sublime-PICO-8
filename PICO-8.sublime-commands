@@ -1,0 +1,27 @@
+[{
+	"caption": "PICO-8: Run Cartridge",
+	"command": "pico_run_cart"
+}, {
+	"caption": "PICO-8: Setup PICO-8 Path",
+	"command": "pico_setup_path"
+}, {
+	"caption": "PICO-8: Browse BBS",
+	"command": "open_url",
+	"args": { "url": "http://www.lexaloffle.com/bbs/?cat=7" }
+}, {
+	"caption": "PICO-8: Browse API Reference",
+	"command": "open_url",
+	"args": { "url": "http://neko250.github.io/pico8-api" }
+}, {
+	"caption": "PICO-8: Download Font",
+	"command": "open_url",
+	"args": { "url": "https://raw.githubusercontent.com/Neko250/sublime-PICO-8/master/font/PICO-8.ttf" }
+}, {
+	"caption": "Preferences: PICO-8 - Default",
+	"command": "open_file",
+	"args": { "file": "${packages}/PICO-8/PICO-8.sublime-settings" }
+}, {
+	"caption": "Preferences: PICO-8 - User",
+	"command": "open_file",
+	"args": { "file": "${packages}/User/PICO-8.sublime-settings" }
+}]

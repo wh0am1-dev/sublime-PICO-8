@@ -1,10 +1,12 @@
 {
-    "color_scheme": "Packages/PICO-8/PICO-8.tmTheme",
-    "tab_size": 1,
-    "translate_tabs_to_spaces": true,
-    "detect_indentation": false,
-    "font_face": "PICO-8",
-    "font_options": ["no_antialias"],
-    "line_padding_bottom": 1,
-    "line_padding_top": 1
+	"color_scheme": "Packages/PICO-8/PICO-8.tmTheme",
+	"tab_size": 1,
+	"translate_tabs_to_spaces": true,
+	"detect_indentation": false,
+	"font_face": "PICO-8",
+	"font_options": [ "no_antialias" ],
+	"line_padding_bottom": 1,
+	"line_padding_top": 1,
+	"highlight_line": true,
+	"pico-8_path": "undefined"
 }

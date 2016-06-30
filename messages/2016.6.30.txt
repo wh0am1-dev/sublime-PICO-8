@@ -1,0 +1,37 @@
+Sublime PICO-8 v2016.6.30
+
+We have changed some post installation methods:
+
+Font installation
+=================
+
+To download the font, open the Command Palette in Sublime Text (ctrl+shift+p / cmd+shift+p) and run "PICO-8: Download Font".
+Restart Sublime Text and test different font sizes until you find one that goes well with your screen resolution !
+
+Cartridge runner setup
+======================
+
+To setup the Cartridge Runner, open the Command Palette in Sublime Text (ctrl+shift+p / cmd+shift+p) and run "PICO-8: Setup PICO-8 Path".
+Then enter the path to your PICO-8 executable in the prompt input.
+
+Defaults to:
+  Linux:   "/there/is/no/default/in/linux/shrug/pico8"
+  OSX:     "/Applications/PICO-8.app/Contents/MacOS/pico8"
+  Windows: "C:\\Program Files (x86)\\PICO-8\\pico8.exe"
+
+IMPORTANT: Remember using the escape character for the backslash ("\\") instead of a single one ("\") in Windows !!!
+
+Changelog
+=========
+
+- added: command palette download font shortcut: "PICO-8: Download Font".
+- added: command palette preferences commands: "Preferences: PICO-8 - Default" & "Preferences: PICO-8 - User".
+- added: command palette bbs shortcut: "PICO-8: Browse BBS".
+- added: command palette API reference shortcut: "PICO-8: Browse API Reference".
+- added: "highlight_line" setting defaults to "true".
+- added: menu items to open preferences files: "Preferences > Package Settings > PICO-8".
+- changed: version system changed to tagging date.
+- changed: theme's line highlight is now a bit brighter than the background.
+- fixed: setup cartridge runner from the command palette: "PICO-8: Setup PICO-8 Path".
+- fixed: run cartridges from the command palette: "PICO-8: Run Cartridge".
+- removed: old build system: "PICO-8.sublime-build".
