@@ -93,6 +93,11 @@ __IMPORTANT__: Remember using the escape character for the backslash (`\\`) inst
 
 ## Version History
 
+- __v2016.7.1__:
+	- `added`: `.no-sublime-package`.
+	- `changed`: package is no longer compressed.
+	- `fixed`: cartridge runner is now visible to sublime.
+
 - __v2016.6.30__:
 	- `added`: command palette download font shortcut: `PICO-8: Download Font`.
 	- `added`: command palette preferences: `Preferences: PICO-8 - Default` & `Preferences: PICO-8 - User`.

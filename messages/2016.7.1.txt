@@ -1,0 +1,8 @@
+Sublime PICO-8 v2016.7.1
+
+Changelog
+=========
+
+- added: ".no-sublime-package".
+- changed: package is no longer compressed.
+- fixed: cartridge runner is now visible to sublime.
