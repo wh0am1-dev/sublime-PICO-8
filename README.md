@@ -95,7 +95,7 @@ __IMPORTANT__: Remember using the escape character for the backslash (`\\`) inst
 
 - __v2016.6.30__:
 	- `added`: command palette download font shortcut: `PICO-8: Download Font`.
-	- `added`: command palette preferences commands: `Preferences: PICO-8 - Default` & `Preferences: PICO-8 - User`.
+	- `added`: command palette preferences: `Preferences: PICO-8 - Default` & `Preferences: PICO-8 - User`.
 	- `added`: command palette bbs shortcut: `PICO-8: Browse BBS`.
 	- `added`: command palette API reference shortcut: `PICO-8: Browse API Reference`.
 	- `added`: `highlight_line` setting defaults to `true`.
