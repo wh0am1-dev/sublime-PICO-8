@@ -1,6 +1,6 @@
 <snippet>
 	<content><![CDATA[--- ${4:Describe what $2 does (e.g. launches a nyan cat missile)}
-${3/([^,]+)(,\s*)?/-- @param $1 description\n/g}-- @return ${5:nil}
+${3/([^,]+)(,\s*)?/-- @param $1	description\n/g}-- @return ${5:nil}
 ${1:local }function ${2:function_name}( ${3:...} )
 	${0:-- body}
 end]]></content>
