@@ -58,7 +58,7 @@ contexts:
       scope: constant.language.lua
     - match: '(?<![^.]\.|:)\b(self)\b'
       scope: variable.language.self.lua
-    - match: '(?<![^.]\.|:)\b(error)\s*(\()'
+    - match: '(?<![^.]\.|:)\b(error)\s*(\(?)'
       captures:
         1: support.function.lua
         2: none
@@ -88,7 +88,14 @@ contexts:
         0: punctuation.definition.string.begin.lua
       push: error_string_quoted_multiline
 
-    - match: \)
+    - include: main
+    - include: error_parens
+  error_parens:
+    - match: '\('
+      captures:
+        0: none
+      push: error_parens
+    - match: '\)'
       pop: true
     - include: main
   # Error call strings
