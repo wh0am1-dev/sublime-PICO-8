@@ -1,6 +1,12 @@
 %YAML 1.2
 ---
 # http://www.sublimetext.com/docs/3/syntax.html
+#
+#        
+#        
+#        
+#        5: 
+#        6: 
 name: LuaExtended # by viluon
 comment: "LuaExtended Syntax: version 0.1"
 file_extensions:
@@ -13,22 +19,11 @@ variables:
   number: '(?<![\d.])\b0[xX][a-fA-F\d\.]+([pP][\-\+]?\d+)?|\b\d+(\.\d+)?([eE]-?\d+)?|\.\d+([eE]-?\d+)?'
 contexts:
   main:
-    - match: '\b(function)\s+([a-zA-Z_.:]+[.:])?([a-zA-Z_]\w*)\s*(\()([^)]*)(\))'
+    - match: '\b(function)\s+'
       scope: meta.function.lua
       captures:
         1: keyword.control.lua
-        2: entity.name.function.scope.lua
-        3: entity.name.function.lua
-        4: punctuation.definition.parameters.begin.lua
-        5: variable.parameter.function.lua
-        6: punctuation.definition.parameters.end.lua
-    - match: '\b(function)\s*(\()([^)]*)(\))'
-      scope: meta.function.lua
-      captures:
-        1: keyword.control.lua
-        2: punctuation.definition.parameters.begin.lua
-        3: variable.parameter.function.lua
-        4: punctuation.definition.parameters.end.lua
+      push: function_def_name
     - match: '{{number}}'
       scope: constant.numeric.lua
     - match: "'"
@@ -74,6 +69,23 @@ contexts:
     - match: '([a-zA-Z_.:]+[.:])?([a-zA-Z_]\w*)\s*(?=\(|\"|''|\[(\=*)\[|\{)'
       captures:
         2: variable.function.lua
+  function_def_name:
+    - match: '([a-zA-Z_.:]+[.:])?([a-zA-Z_]\w*)\s*'
+      captures:
+        1: entity.name.function.scope.lua
+        2: entity.name.function.lua
+    - match: '(\()'
+      captures:
+        1: punctuation.definition.parameters.begin.lua
+      push: function_def_args
+  function_def_args:
+    - match: '([^)]*)'
+      captures:
+        1: variable.parameter.function.lua
+    - match: '(\))'
+      captures:
+        1: punctuation.definition.parameters.end.lua
+      set: main
   error_call:
     - match: "'"
       captures:
