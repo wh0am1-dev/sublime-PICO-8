@@ -46,7 +46,7 @@ contexts:
       scope: constant.language.lua
     - match: '(?<![^.]\.|:)\b(self)\b'
       scope: variable.language.self.lua
-    - match: '(?<![^.]\.|:)\b(error)\s*([\(''"])'
+    - match: '(?<![^.]\.|:)\b(error)\s*(?:(\()|(?=[''"]))'
       captures:
         1: support.function.lua
         2: none
