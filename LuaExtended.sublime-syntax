@@ -46,11 +46,11 @@ contexts:
       scope: constant.language.lua
     - match: '(?<![^.]\.|:)\b(self)\b'
       scope: variable.language.self.lua
-    - match: '(?<![^.]\.|:)\b(error)\s*(?:(\()|(?=[''"]))'
+    - match: '(?<![^.]\.|:)\b(error)\s*(?=[\(''"])'
       captures:
         1: support.function.lua
         2: none
-      push: error_call
+      push: error_call_start
     - match: '(?<![^.]\.|:)\b(assert|collectgarbage|dofile|error|getfenv|getmetatable|ipairs|loadfile|loadstring|module|next|pairs|pcall|print|rawequal|rawget|rawset|require|select|setfenv|setmetatable|tonumber|tostring|type|unpack|xpcall)\b(?=[( {"''\[])'
       scope: support.function.lua
     - match: '(?<![^.]\.|:)\b(coroutine\.(create|resume|running|status|wrap|yield)|string\.(byte|char|dump|find|format|gmatch|gsub|len|lower|match|rep|reverse|sub|upper)|table\.(concat|insert|maxn|remove|sort)|math\.(abs|acos|asin|atan2?|ceil|cosh?|deg|exp|floor|fmod|frexp|ldexp|log|log10|max|min|modf|pow|rad|random|randomseed|sinh?|sqrt|tanh?)|io\.(close|flush|input|lines|open|output|popen|read|tmpfile|type|write)|os\.(clock|date|difftime|execute|exit|getenv|remove|rename|setlocale|time|tmpname)|package\.(cpath|loaded|loadlib|path|preload|seeall)|debug\.(debug|[gs]etfenv|[gs]ethook|getinfo|[gs]etlocal|[gs]etmetatable|getregistry|[gs]etupvalue|traceback))\b(?=[( {"''\[])'
@@ -79,7 +79,30 @@ contexts:
       captures:
         1: punctuation.definition.parameters.end.lua
       pop: true
-  error_call:
+  error_call_start:
+    - match: "'"
+      captures:
+        0: punctuation.definition.string.begin.lua
+      set: error_string_quoted_single
+    - match: '"'
+      captures:
+        0: punctuation.definition.string.begin.lua
+      set: error_string_quoted_double
+    - match: '(?<!--)\[(=*)\['
+      captures:
+        0: punctuation.definition.string.begin.lua
+      set: error_string_quoted_multiline
+    - match: '\('
+      captures:
+        0: none
+      set: error_parens
+  error_parens:
+    - match: '\('
+      captures:
+        0: none
+      push: error_parens
+    - match: '\)'
+      pop: true
     - match: "'"
       captures:
         0: punctuation.definition.string.begin.lua
@@ -92,18 +115,7 @@ contexts:
       captures:
         0: punctuation.definition.string.begin.lua
       push: error_string_quoted_multiline
-
     - include: main
-    - include: error_parens
-  error_parens:
-    - match: '\('
-      captures:
-        0: none
-      push: error_parens
-    - match: '\)'
-      pop: true
-    - include: main
-  # Error call strings
   error_string_quoted_single:
     - meta_scope: sublimelinter.mark.error
     - match: "'"
@@ -125,7 +137,6 @@ contexts:
         0: punctuation.definition.string.end.lua
       pop: true
     - include: string
-
   string_quoted_single:
     - meta_scope: string.quoted.single.lua
     - match: "'"
