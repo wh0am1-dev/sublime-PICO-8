@@ -1,7 +1,7 @@
 <snippet>
 	<content><![CDATA[
 function _update()
- ${1}
+ ${1:-- update code}
 end
 ]]></content>
 	<tabTrigger>update</tabTrigger>

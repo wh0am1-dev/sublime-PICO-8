@@ -1,7 +1,7 @@
 <snippet>
 	<content><![CDATA[
 function _draw()
- ${1}
+ ${1:-- draw code}
 end
 ]]></content>
 	<tabTrigger>draw</tabTrigger>

@@ -1,10 +1,10 @@
 <snippet>
 	<content><![CDATA[
-while ${1:condition} do
+repeat
  ${2:-- loop code}
-end
+until ${1:condition}
 ]]></content>
-	<tabTrigger>while</tabTrigger>
+	<tabTrigger>repeat</tabTrigger>
 	<scope>source.p8</scope>
-	<description>while</description>
+	<description>repeat</description>
 </snippet>

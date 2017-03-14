@@ -1,4 +1,4 @@
-# PICO-8 v0.1.8 API
+# PICO-8 v0.1.10 API
 
 _draw
 _init
@@ -36,6 +36,7 @@ dir
 dset
 exit
 export
+extcmd
 fget
 flip
 flr

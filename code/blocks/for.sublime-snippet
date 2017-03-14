@@ -1,7 +1,7 @@
 <snippet>
 	<content><![CDATA[
 for ${1:var}=${2:first},${3:last},${4:incr} do
- ${5}
+ ${5:-- loop code}
 end
 ]]></content>
 	<tabTrigger>for</tabTrigger>

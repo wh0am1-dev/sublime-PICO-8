@@ -93,6 +93,19 @@ __IMPORTANT__: Remember using the escape character for the backslash (`\\`) inst
 
 ## Version History
 
+- __v2017.3.14__:
+	- `added`: automatically lowercase the file upon saving.
+	- `added`: `extcmd` function (syntax and autocomplete).
+	- `added`: raspberry pi / pocketchip gpio snippet.
+	- `added`: `forpairs` block snippet.
+	- `added`: `repeat-until` block snippet.
+	- `added`: `goto` block snippet.
+	- `added`: semantic comments inside block snippets.
+	- `changed`: updated api autocompletions to match PICO-8 0.1.10.
+	- `changed`: `forin` block snippet renamed to `forall`.
+	- `fixed`: hex number highlighting when not preceded by space.
+	- `fixed`: comment start definition (`Toggle Comment` from the Command Palette).
+
 - __v2016.7.1__:
 	- `added`: `.no-sublime-package`.
 	- `changed`: package is no longer compressed.

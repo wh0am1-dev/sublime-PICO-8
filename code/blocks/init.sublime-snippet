@@ -1,7 +1,7 @@
 <snippet>
 	<content><![CDATA[
 function _init()
- ${1}
+ ${1:-- init code}
 end
 ]]></content>
 	<tabTrigger>init</tabTrigger>

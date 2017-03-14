@@ -1,7 +1,7 @@
 <snippet>
 	<content><![CDATA[
 elseif ${1:condition} then
- ${2}
+ ${2:-- elseif code}
 end
 ]]></content>
 	<tabTrigger>elseif</tabTrigger>

@@ -1,9 +1,9 @@
 <snippet>
 	<content><![CDATA[
 if ${1:condition} then
- ${2}
+ ${2:-- if code}
 else
- ${3}
+ ${3:-- else code}
 end
 ]]></content>
 	<tabTrigger>ifelse</tabTrigger>
