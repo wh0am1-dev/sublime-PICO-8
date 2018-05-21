@@ -11,4 +11,5 @@ class PicoOnSave(sublime_plugin.EventListener):
 	def on_pre_save(self, view):
 		syntax = view.settings().get("syntax")
 		if "PICO-8" in syntax:
-			view.run_command("pico_to_lower")
+			if view.settings().get("pico-8_auto_lowercase", True):
+				view.run_command("pico_to_lower")

@@ -8,5 +8,6 @@
 	"line_padding_bottom": 1,
 	"line_padding_top": 1,
 	"highlight_line": true,
-	"pico-8_path": "undefined"
+	"pico-8_path": "undefined",
+	"pico-8_auto_lowercase": true
 }
