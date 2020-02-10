@@ -1,0 +1,6 @@
+<snippet>
+	<content><![CDATA[local ${1:x} = ${0:$SELECTION}]]></content>
+	<tabTrigger>local</tabTrigger>
+	<scope>source.luae - string</scope>
+	<description>local x = 1</description>
+</snippet>

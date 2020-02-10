@@ -9,11 +9,10 @@
     <key>settings</key>
     <dict>
         <key>decreaseIndentPattern</key>
-        <string>^\s*(elseif|else|end|until.+|\})\s*$</string>
+        <string>(^(?!=.*(then|do).*).*\b(elseif|else|end|until)\b(?!.*(\"|\'|\[\=*\[)).*$|^((?!\{).)*\}\;?.*$)</string>
+
         <key>increaseIndentPattern</key>
-        <string>^\s*(else|elseif|for|(return\s+|local\s+|.+=)?function|if\s+.*\s+then|while|repeat)\b((?!end).)*$|\{\s*$</string>
+        <string>(^.*\b((local\s+)?function|repeat)(?!.*(\"|\'|\[\=*\[))\b((?!\bend\b).)*$|^.*\b(do|then|else)(?!.*(\"|\'|\[\=*\[))\b((?!\bend\b).)*$|^.*\{((?!\}).)*$)</string>
     </dict>
-    <key>uuid</key>
-    <string>411468A8-E0AC-415A-9E71-E2BD091EB571</string>
 </dict>
 </plist>

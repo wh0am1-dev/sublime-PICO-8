@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[for ${1:i}, ${2:v} in ipairs( ${3:table_name} ) do
+	${0:print( $1, $2 )}
+end]]></content>
+	<tabTrigger>fori</tabTrigger>
+	<scope>source.luae - string</scope>
+	<description>for i, v in ipairs()</description>
+</snippet>
