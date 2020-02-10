@@ -1,6 +1,0 @@
-<snippet>
-	<content><![CDATA[${1:foo} = $1 * ${2:2}]]></content>
-	<tabTrigger>*=</tabTrigger>
-	<scope>source.luae - string</scope>
-	<description>x = x * y</description>
-</snippet>
