@@ -9,10 +9,10 @@ function _update60()
 end
 
 function _draw()
- ${3:-- draw code}
+ ${3:${SELECTION:-- draw code}}
 end
 ]]></content>
-	<tabTrigger>main</tabTrigger>
-	<scope>source.p8</scope>
+	<tabTrigger>mainloop</tabTrigger>
+	<scope>source.p8 source.lua - string - comment</scope>
 	<description>main loop</description>
 </snippet>

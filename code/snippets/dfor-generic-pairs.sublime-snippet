@@ -1,9 +1,11 @@
 <snippet>
-	<content><![CDATA[-- ${4:Describe what this loop does (e.g. iterates over $3, launching fireworks along the way)}
-for ${1:k}, ${2:v} in pairs( ${3:table_name} ) do
-	${0:print( $1, $2 )}
-end]]></content>
+	<content><![CDATA[
+-- ${4:Describe what this loop does}
+for ${1:k}, ${2:v} in pairs( ${3:table} ) do
+ ${0:${SELECTION:print( $1, $2 )}}
+end
+]]></content>
 	<tabTrigger>dforp</tabTrigger>
-	<scope>source.luae - string</scope>
+	<scope>source.p8 source.lua - string - comment</scope>
 	<description>Documented for k, v in pairs()</description>
 </snippet>

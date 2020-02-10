@@ -1,11 +1,11 @@
 <snippet>
 	<content><![CDATA[
-poke(0x5f2d,1)
+poke(0x5f2d,1) -- just once
 x = stat(32)
 y = stat(33)
 mb = stat(34)
 ]]></content>
 	<tabTrigger>mouse</tabTrigger>
-	<scope>source.p8</scope>
+	<scope>source.p8 source.lua - string - comment</scope>
 	<description>mouse hack</description>
 </snippet>

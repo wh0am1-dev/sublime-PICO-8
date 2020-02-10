@@ -1,10 +1,12 @@
 <snippet>
-	<content><![CDATA[--- ${4:Describe what $2 does (e.g. launches a nyan cat missile)}.
+	<content><![CDATA[
+--- ${4:Describe what $2 does}.
 ${3/([^,]+)(,\s*)?/-- @param $1	description\n/g}-- @return ${5:nil}
 ${1:local }function ${2:function_name}( ${3:...} )
-	${0:-- body}
-end]]></content>
+ ${0:${SELECTION:-- body}}
+end
+]]></content>
 	<tabTrigger>dfun</tabTrigger>
-	<scope>source.luae - string</scope>
+	<scope>source.p8 source.lua - string - comment</scope>
 	<description>LDoc function</description>
 </snippet>

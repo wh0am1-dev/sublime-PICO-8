@@ -1,10 +1,10 @@
 <snippet>
 	<content><![CDATA[
-for ${1:i} = ${2:start}, ${3:end}, ${4:incr} do
+for ${1:v} all( ${2:table} ) do
  ${0:${SELECTION:print( $1 )}}
 end
 ]]></content>
-	<tabTrigger>for</tabTrigger>
+	<tabTrigger>fori</tabTrigger>
 	<scope>source.p8 source.lua - string - comment</scope>
-	<description>for i = 1, 10</description>
+	<description>for i, v in ipairs()</description>
 </snippet>

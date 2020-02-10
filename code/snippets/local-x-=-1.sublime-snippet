@@ -1,6 +1,8 @@
 <snippet>
-	<content><![CDATA[local ${1:x} = ${0:$SELECTION}]]></content>
+	<content><![CDATA[
+local ${1:x} = ${0:${SELECTION:1}}
+]]></content>
 	<tabTrigger>local</tabTrigger>
-	<scope>source.luae - string</scope>
+	<scope>source.p8 source.lua - string - comment</scope>
 	<description>local x = 1</description>
 </snippet>

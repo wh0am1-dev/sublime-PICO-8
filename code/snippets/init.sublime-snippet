@@ -5,6 +5,6 @@ function _init()
 end
 ]]></content>
 	<tabTrigger>init</tabTrigger>
-	<scope>source.p8</scope>
+	<scope>source.p8 source.lua - string - comment</scope>
 	<description>_init()</description>
 </snippet>

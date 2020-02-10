@@ -1,8 +1,10 @@
 <snippet>
-	<content><![CDATA[if ${1:foo} == ${2:bar} then
-	${0:$SELECTION}
-${3:end}]]></content>
+	<content><![CDATA[
+if ${1:foo} == ${2:bar} then
+ ${0:$SELECTION}
+${3:end}
+]]></content>
 	<tabTrigger>if=</tabTrigger>
-	<scope>source.luae - string</scope>
+	<scope>source.p8 source.lua - string - comment</scope>
 	<description>if a == b then</description>
 </snippet>

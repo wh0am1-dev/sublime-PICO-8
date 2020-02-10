@@ -1,8 +1,10 @@
 <snippet>
-	<content><![CDATA[elseif ${1:foo} ~= ${3:bar} then
-	${0:$SELECTION}
-end]]></content>
+	<content><![CDATA[
+elseif ${1:foo} ~= ${3:bar} then
+ ${0:$SELECTION}
+${3:end}
+]]></content>
 	<tabTrigger>elseif~</tabTrigger>
-	<scope>source.luae - string</scope>
+	<scope>source.p8 source.lua - string - comment</scope>
 	<description>elseif a ~= b then</description>
 </snippet>

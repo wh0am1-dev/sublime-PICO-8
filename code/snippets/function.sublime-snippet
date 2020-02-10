@@ -1,10 +1,10 @@
 <snippet>
 	<content><![CDATA[
-function ${1:foo}(${2:var})
- ${3:-- do something}
+${1:local }function ${2:function_name}( ${3:...} )
+ ${0:${SELECTION:-- body}}
 end
 ]]></content>
-	<tabTrigger>func</tabTrigger>
-	<scope>source.p8</scope>
+	<tabTrigger>function</tabTrigger>
+	<scope>source.p8 source.lua - string - comment</scope>
 	<description>function</description>
 </snippet>

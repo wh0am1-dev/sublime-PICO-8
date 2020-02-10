@@ -1,10 +1,10 @@
 <snippet>
 	<content><![CDATA[
 function _update()
- ${1:-- update code}
+ ${1:${SELECTION:-- update code}}
 end
 ]]></content>
 	<tabTrigger>update</tabTrigger>
-	<scope>source.p8</scope>
+	<scope>source.p8 source.lua - string - comment</scope>
 	<description>_update()</description>
 </snippet>

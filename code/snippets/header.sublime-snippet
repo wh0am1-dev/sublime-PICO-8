@@ -4,6 +4,6 @@
 -- ${2:author}
 ]]></content>
 	<tabTrigger>head</tabTrigger>
-	<scope>source.p8</scope>
+	<scope>source.p8 source.lua - string - comment</scope>
 	<description>cart header</description>
 </snippet>

@@ -1,0 +1,11 @@
+<snippet>
+	<content><![CDATA[
+-- ${3:Describe what this loop does}
+for ${1:v} all( ${2:table} ) do
+ ${0:${SELECTION:print( $1 )}}
+end
+]]></content>
+	<tabTrigger>dfori</tabTrigger>
+	<scope>source.p8 source.lua - string - comment</scope>
+	<description>Documented for i, v in ipairs()</description>
+</snippet>

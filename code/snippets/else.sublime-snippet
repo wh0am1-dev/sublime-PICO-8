@@ -1,8 +1,10 @@
 <snippet>
-	<content><![CDATA[else
-	${0:$SELECTION}
-end]]></content>
+	<content><![CDATA[
+else
+ ${0:$SELECTION}
+end
+]]></content>
 	<tabTrigger>else</tabTrigger>
-	<scope>source.luae - string</scope>
+	<scope>source.p8 source.lua - string - comment</scope>
 	<description>else ... end</description>
 </snippet>

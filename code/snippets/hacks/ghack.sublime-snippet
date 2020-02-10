@@ -10,6 +10,6 @@
 -- poke(0x5f2c,7) -- mirror top-left quarter
 ]]></content>
 	<tabTrigger>ghack</tabTrigger>
-	<scope>source.p8</scope>
+	<scope>source.p8 source.lua - string - comment</scope>
 	<description>graphics hack</description>
 </snippet>

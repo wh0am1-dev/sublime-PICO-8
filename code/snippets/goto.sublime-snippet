@@ -4,6 +4,6 @@
 goto ${1:label}
 ]]></content>
 	<tabTrigger>goto</tabTrigger>
-	<scope>source.p8</scope>
+	<scope>source.p8 source.lua - string - comment</scope>
 	<description>goto</description>
 </snippet>
