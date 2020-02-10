@@ -2,11 +2,11 @@
 <plist version="1.0">
 <dict>
 	<key>scope</key>
-	<string>source.luae</string>
+	<string>source.pico8</string>
 	<key>settings</key>
 	<dict>
 		<key>cancelCompletion</key>
-		<string>^.*\b(then|end|do|else|local\s+\w*\s*=?\s*)$</string>
+		<string>^(?:.*\b(?:break|then|end|do|else|local\s+\w*\s*=?\s*)|::.*)$</string>
 	</dict>
 </dict>
 </plist>
