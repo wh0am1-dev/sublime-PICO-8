@@ -1,5 +1,5 @@
 {
-	"scope" : "source.luae - string",
+	"scope" : "source.pico8 - string - comment",
 	"completions":
 	[
 		"and",
