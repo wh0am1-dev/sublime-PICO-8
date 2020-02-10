@@ -187,6 +187,17 @@ And there you go! Try opening a `*.luae`, `*.ext.lua` or `*.extended.lua` file a
 
 ## Version History
 
+- __v2020.02.10__:
+	- Initial fork and merge of Sublime PICO-8 and LuaExtended
+	- Remove inapplicable LuaExtended parts
+	- `added`: Add `goto` to list of completion keywords
+	- `added`: Add support for block comments
+	- `added`: Additional completion cancel triggers
+	- `changed`: Rearrange files from both sources
+	- `changed`: Reformat CDATA in snippets
+	- `fixed`: Restrict snippet/completion/etc scopes, exclude strings, comments, non-lua sections
+	- `removed`: Disable completion of `count()` and mapdraw`()`, both deprecated
+
 - __v2017.3.14__:
 	- `added`: automatically lowercase the file upon saving.
 	- `added`: `extcmd` function (syntax and autocomplete).
