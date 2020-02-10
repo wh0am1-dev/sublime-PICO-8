@@ -11,11 +11,11 @@
 }, {
 	"caption": "PICO-8: Browse API Reference",
 	"command": "open_url",
-	"args": { "url": "http://neko250.github.io/pico8-api" }
+	"args": { "url": "http://pico-8.github.io/pico8-api" }
 }, {
 	"caption": "PICO-8: Download Font",
 	"command": "open_url",
-	"args": { "url": "https://raw.githubusercontent.com/Neko250/sublime-PICO-8/master/font/PICO-8.ttf" }
+	"args": { "url": "https://raw.githubusercontent.com/sparr/sublime-PICO-8/master/font/PICO-8.ttf" }
 }, {
 	"caption": "Preferences: PICO-8 - Default",
 	"command": "open_file",
