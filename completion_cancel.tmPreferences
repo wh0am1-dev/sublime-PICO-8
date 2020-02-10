@@ -2,7 +2,7 @@
 <plist version="1.0">
 <dict>
 	<key>scope</key>
-	<string>source.pico8</string>
+	<string>source.8</string>
 	<key>settings</key>
 	<dict>
 		<key>cancelCompletion</key>

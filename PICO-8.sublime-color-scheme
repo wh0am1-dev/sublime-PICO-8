@@ -130,7 +130,7 @@
         },
         {
             "name": "pico8 header \"doctype\"",
-            "scope": "source.pico8 entity.name.tag.doctype",
+            "scope": "source.p8 entity.name.tag.doctype",
             "foreground": "var(pico8_palette_7_7_white)",
             "font_style": "bold"
         },
