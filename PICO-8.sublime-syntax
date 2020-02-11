@@ -1,4 +1,4 @@
-`%YAML 1.2
+%YAML 1.2
 ---
 name: PICO-8 # by sparr
 comment: "PICO-8 (lua syntax 0.9)"
