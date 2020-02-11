@@ -15,10 +15,12 @@ variables:
   identifier: '(?<![[:alnum:]_])[[:alpha:]_][[:alnum:]_]*(?![[:alnum:]_])'
 contexts:
   main:
-    - match: '^pico-8 cartridge // (http://www.pico-8.com)\nversion (\d+)$'
+    - match: '^pico-8 cartridge \/\/ (http:\/\/www.pico-8.com)$'
       scope: entity.name.tag.doctype
       captures:
         1: markup.underline.link
+    - match: '^version (\d+)$'
+      scope: entity.name.tag.doctype
     - match: '^__(?:gfx|label)__$'
       scope: meta.toc-list
       push: graphical_block
@@ -103,9 +105,9 @@ contexts:
       captures:
         1: punctuation.section.braces.begin
         2: punctuation.section.braces.end
+    - include: block_end
     - match: '{{identifier}}'
       scope: variable.other
-    - include: block_end
   function_def:
     - meta_scope: meta.function.lua
     - match: '({{identifier}})([.:])'
@@ -155,7 +157,7 @@ contexts:
     - match: '\\u\{[0-9a-fA-F]{,7}\}'
       scope: constant.character.escape.lua
   block_end:
-    - match: '(?=__(?:gff|gfx|label|lua|map|music|sfx)__)'
+    - match: '(?=^__(?:gff|gfx|label|lua|map|music|sfx)__$)'
       pop: true
   graphical_block:
     - meta_content_scope: pico8.block.graphical
