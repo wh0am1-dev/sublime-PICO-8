@@ -1,7 +1,7 @@
 <snippet>
 	<content><![CDATA[
 function _update60()
- ${1:${SELECTION:-- update code}}
+ ${1:${SELECTION/^$/-- update code/}}
 end
 ]]></content>
 	<tabTrigger>update</tabTrigger>

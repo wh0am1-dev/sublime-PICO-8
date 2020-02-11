@@ -1,7 +1,7 @@
 <snippet>
 	<content><![CDATA[
 ${1:local }function ${2:function_name}( ${3:...} )
- ${0:${SELECTION:-- body}}
+ ${0:${SELECTION/^$/-- function body/}}
 end
 ]]></content>
 	<tabTrigger>function</tabTrigger>

@@ -1,7 +1,7 @@
 <snippet>
 	<content><![CDATA[
 for ${1:i} = ${2:start}, ${3:end}, ${4:incr} do
- ${0:${SELECTION:print( $1 )}}
+ ${0:${SELECTION/^$/-- loop body/}}
 end
 ]]></content>
 	<tabTrigger>for</tabTrigger>

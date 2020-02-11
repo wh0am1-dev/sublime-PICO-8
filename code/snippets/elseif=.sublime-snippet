@@ -1,7 +1,7 @@
 <snippet>
 	<content><![CDATA[
 elseif ${1:foo} == ${2:bar} then
- ${0:$SELECTION}
+ ${0:${SELECTION/^$/-- code/}}
 ${3:end}
 ]]></content>
 	<tabTrigger>elseif=</tabTrigger>
