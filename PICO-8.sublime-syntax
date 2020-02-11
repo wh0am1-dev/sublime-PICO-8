@@ -11,8 +11,8 @@ variables:
   hexdigit: '[a-fA-F\d]'
   hexnumber: '0[xX](?:{{hexdigit}}+\.?{{hexdigit}}?|\.{{hexdigit}}+)'
   decnumber: '(?:\d+\.?\d*|\.\d+)(?:[eE][+-]?\d+)'
-  number: "(?<![\d.])(?:{{hexnumber}}|{{decnumber}}?)(?![\d.])"
-  identifier: '(?<![[:alpha:]_][[:alnum:]_]*(?![[:alnum:]_])'
+  number: "(?<![0-9.])(?:{{hexnumber}}|{{decnumber}}?)(?![0-9.])"
+  identifier: '(?<![[:alnum:]_])[[:alpha:]_][[:alnum:]_]*(?![[:alnum:]_])'
 contexts:
   main:
     - match: '^pico-8 cartridge // (http://www.pico-8.com)\nversion (\d+)$'
@@ -118,7 +118,7 @@ contexts:
       scope: punctuation.definition.parameters.begin.lua
       set: function_def_args
   function_def_args:
-    meta_scope: meta.function.parameters.lua
+    - meta_scope: meta.function.parameters.lua
     - match: '[^),\s]*'
       scope: variable.parameter.function.lua
     - match: '\)'
