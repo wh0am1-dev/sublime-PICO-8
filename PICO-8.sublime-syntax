@@ -11,7 +11,7 @@ variables:
   hexdigit: '[a-fA-F\d]'
   hexnumber: '0[xX](?:{{hexdigit}}+\.?{{hexdigit}}?|\.{{hexdigit}}+)'
   decnumber: '(?:\d+\.?\d*|\.\d+)(?:[eE][+-]?\d+)'
-  number: '(?<![\d.])(?:{{hexnumber}}|{{decnumber}}?)(?![\d.])'
+  number: '(?<![\d.])(?:{{hexnumber}}|{{decnumber}}?)'
   identifier: '(?<![[:alnum:]_])[[:alpha:]_][[:alnum:]_]*(?![[:alnum:]_])'
 contexts:
   main:
