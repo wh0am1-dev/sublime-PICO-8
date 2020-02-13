@@ -71,7 +71,12 @@
         },
         {
             "name": "Keyword operator",
-            "scope": "keyword.operator.assignment",
+            "scope": "keyword.operator.logical",
+            "foreground": "var(pico8_palette_E_14_pink)"
+        },
+        {
+            "name": "Keyword operator",
+            "scope": "keyword.operator",
             "foreground": "var(pico8_palette_7_7_white)"
         },
         {

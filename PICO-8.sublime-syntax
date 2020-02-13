@@ -9,7 +9,7 @@ scope: source.p8
 
 variables:
   hexdigit: '[a-fA-F\d]'
-  hexnumber: '0[xX](?:{{hexdigit}}+\.?{{hexdigit}}?|\.{{hexdigit}}+)'
+  hexnumber: '0[xX](?:{{hexdigit}}+\.?{{hexdigit}}{0,4}|\.{{hexdigit}}+)'
   decnumber: '(?:\d+\.?\d*|\.\d+)(?:[eE][+-]?\d+)'
   number: '(?<![\d.])(?:{{hexnumber}}|{{decnumber}}?)'
   identifier: '(?<![[:alnum:]_])[[:alpha:]_][[:alnum:]_]*(?![[:alnum:]_])'
@@ -62,7 +62,7 @@ contexts:
         1: punctuation.definition.comment.lua
     - match: '\b(local)\b'
       scope: keyword.lua storage.modifier
-    - match: '\b(break|do|else|for|in|if|elseif|return|then|repeat|while|until|end|local|in|goto)\b'
+    - match: '(?<![:alpha:])(break|do|else|for|in|if|elseif|return|then|repeat|while|until|end|local|in|goto)\b'
       scope: keyword.control.flow.lua
     - match: '(?<![^.]\.|:)\b(false|nil|true)\b'
       scope: constant.language.lua
@@ -76,16 +76,16 @@ contexts:
       scope: support.function.deprecated.lua
     - match: '(?<![^.]\.|:)\b(?:add|all|del|foreach|menuitem|)\b'
       scope: support.function.header.lua
-    - match: '(?<![^.]\.|:)\b(?:abs|assert|atan2|band|bnot|bor|btn|btnp|bxor|camera|cartdata|cd|circ|circfill|clip|cls|cocreate|color|coresume|cos|costatus|count|cstore|cursor|dget|dir|dset|exit|export|extcmd|fget|flip|flr|folder|fset|help|holdframe|import|info|install_demos|install_games|keyconfig|line|load|ls|map|mapdraw|max|memcpy|memset|mget|mid|min|mkdir|mset|music|pairs|pal|palt|peek|pget|poke|print|printh|pset|reboot|rect|rectfill|reload|resume|rnd|run|save|setmetatable|sfx|sget|sgn|shl|shr|shutdown|sin|splore|spr|sqrt|srand|sset|sspr|stat|sub|time|type|yield)\b'
+    - match: '(?<![^.]\.|[^:]:)\b(?:abs|assert|atan2|band|bnot|bor|btn|btnp|bxor|camera|cartdata|cd|circ|circfill|clip|cls|cocreate|color|coresume|cos|costatus|count|cstore|cursor|dget|dir|dset|exit|export|extcmd|fget|flip|flr|folder|fset|help|holdframe|import|info|install_demos|install_games|keyconfig|line|load|ls|map|mapdraw|max|memcpy|memset|mget|mid|min|mkdir|mset|music|pairs|pal|palt|peek|pget|poke|print|printh|pset|reboot|rect|rectfill|reload|resume|rnd|run|save|setmetatable|sfx|sget|sgn|shl|shr|shutdown|sin|splore|spr|sqrt|srand|sset|sspr|stat|sub|time|type|yield)\b'
       scope: support.function.builtin.lua
     - match: \b(and|or|not)\b
       scope: keyword.operator.word.lua keyword.operator.logical.lua
     - match: '==|[~!]=|<=?|>=?'
       scope: keyword.operator.comparison.lua
-    - match: '\+|-|%|\*|\/|\^'
-      scope: keyword.operator.arithmetic.lua
     - match: '(?:\+|-|%|\*|\/)?=' # might need trailing (?!=)
       scope: keyword.operator.assignment.lua
+    - match: '\+|-|%|\*|\/|\^'
+      scope: keyword.operator.arithmetic.lua
     - match: '#|(?<!\.)\.{2}(?!\.)'
       scope: keyword.operator.lua
     - match: '::{{identifier}}::'
@@ -95,16 +95,22 @@ contexts:
         2: variable.function.lua
     - match: '[\[\]\.:]' # TODO narrow this down a lot
       scope: punctuation.accessor
-    - match: '(\().*(\))'
-      scope: meta.parens
-      captures:
-        1: punctuation.section.parens.begin
-        2: punctuation.section.parens.end
-    - match: '(\{).*(\})'
-      scope: meta.braces
-      captures:
-        1: punctuation.section.braces.begin
-        2: punctuation.section.braces.end
+    - match: '\('
+      scope: punctuation.section.parens.begin
+      push:
+        - meta_content_scope: meta.parens
+        - include: lua_block
+    - match: '\)'
+      scope: punctuation.section.parens.end
+      pop: true
+    - match: '\{'
+      scope: punctuation.section.braces.begin
+      push:
+        - meta_content_scope: meta.braces
+        - include: lua_block
+    - match: '\}'
+      scope: punctuation.section.braces.end
+      pop: true
     - include: block_end
     - match: '{{identifier}}'
       scope: variable.other
