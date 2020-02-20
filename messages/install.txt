@@ -1,12 +1,18 @@
-Thanks for installing the PICO-8 plugin for the Sublime Text 3 editor.
+Thanks for installing the PICO-8 Extended plugin for the Sublime Text 3 editor.
 Please, read this file to complete your installation.
 
 Font installation
 =================
 
-Before starting using this package, you'll need to install PICO-8.ttf to your system fonts.
+For an authentic PICO-8 experience, you can install the PICO-8 font.
 To download the font, open the Command Palette in Sublime Text (ctrl+shift+p / cmd+shift+p) and run "PICO-8: Download Font".
-Restart Sublime Text and test different font sizes until you find one that goes well with your screen resolution !
+Install the font to your system or user fonts in whatever way is appropriate for your OS.
+
+Alternately, other fonts with the PICO-8 glyphs are available online:
+https://www.lexaloffle.com/bbs/?tid=3760
+https://github.com/juanitogan/p8-programming-fonts
+
+With a pixel-based font, you may need to experiment with font size to match your screen resolution.
 
 Cartridge runner setup
 ======================

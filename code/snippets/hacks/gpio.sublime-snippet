@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+-- 128 pin values in the range [0..255]
+poke(0x5f80, 255) -- send 255 to gpio0
+peek(0x5f81) -- get value from gpio1
+]]></content>
+	<tabTrigger>gpio</tabTrigger>
+	<scope>source.p8 source.lua - string - comment</scope>
+	<description>raspi/pchip gpio</description>
+</snippet>

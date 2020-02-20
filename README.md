@@ -2,15 +2,15 @@
 
 PICO-8 plugin for the [Sublime Text 3](https://www.sublimetext.com/) editor.
 
-![sublime-PICO-8](https://raw.githubusercontent.com/Neko250/sublime-PICO-8/master/img/screenshot.png)
+![sublime-PICO-8](https://raw.githubusercontent.com/sparr/sublime-PICO-8/master/img/screenshot.png)
 
 This package includes:
 
-- `.p8` language definition (by [Overkill](http://www.lexaloffle.com/bbs/?uid=11331)).
-- Syntax highlighting (by [Overkill](http://www.lexaloffle.com/bbs/?uid=11331)).
+- `.p8` language definition (originally by [Overkill](http://www.lexaloffle.com/bbs/?uid=11331)).
+- Syntax highlighting (originally by [Overkill](http://www.lexaloffle.com/bbs/?uid=11331)).
 - PICO-8 `.ttf` font (by [RhythmLynx](http://www.lexaloffle.com/bbs/?uid=11704)).
 - Cartridge runner to launch your cart right from Sublime Text.
-- Code completion based on the official [PICO-8 API](http://neko250.github.io/pico8-api/).
+- Code completion based on the official [PICO-8 API](http://pico-8.github.io/pico8-api/).
 - Code snippets.
 
 ----
@@ -31,7 +31,7 @@ This package includes:
 ```bash
 cd ~/.config/sublime-text-3/Packages
 rm -rf PICO-8
-git clone https://github.com/Neko250/sublime-PICO-8 PICO-8
+git clone https://github.com/sparr/sublime-PICO-8 PICO-8
 ```
 
 #### OSX
@@ -39,7 +39,7 @@ git clone https://github.com/Neko250/sublime-PICO-8 PICO-8
 ```bash
 cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages
 rm -rf PICO-8
-git clone https://github.com/Neko250/sublime-PICO-8 PICO-8
+git clone https://github.com/sparr/sublime-PICO-8 PICO-8
 ```
 
 #### Windows
@@ -47,7 +47,7 @@ git clone https://github.com/Neko250/sublime-PICO-8 PICO-8
 ```bash
 cd "%APPDATA%\Sublime Text 3\Packages"
 rd /s /q PICO-8
-git clone https://github.com/Neko250/sublime-PICO-8 PICO-8
+git clone https://github.com/sparr/sublime-PICO-8 PICO-8
 ```
 
 ### Manual Installation
@@ -91,7 +91,19 @@ __IMPORTANT__: Remember using the escape character for the backslash (`\\`) inst
 
 ----
 
+
 ## Version History
+
+- __v2020.02.10__:
+	- Initial fork and merge of Sublime PICO-8 and LuaExtended
+	- Remove inapplicable LuaExtended parts
+	- `added`: Add `goto` to list of completion keywords
+	- `added`: Add support for block comments
+	- `added`: Additional completion cancel triggers
+	- `changed`: Rearrange files from both sources
+	- `changed`: Reformat CDATA in snippets
+	- `fixed`: Restrict snippet/completion/etc scopes, exclude strings, comments, non-lua sections
+	- `removed`: Disable completion of `count()` and mapdraw`()`, both deprecated
 
 - __v2017.3.14__:
 	- `added`: automatically lowercase the file upon saving.

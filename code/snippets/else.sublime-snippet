@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+else
+ ${0:${SELECTION/^$/-- code/}}
+end
+]]></content>
+	<tabTrigger>else</tabTrigger>
+	<scope>source.p8 source.lua - string - comment</scope>
+	<description>else ... end</description>
+</snippet>

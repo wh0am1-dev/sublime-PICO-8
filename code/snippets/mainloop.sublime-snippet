@@ -1,0 +1,18 @@
+<snippet>
+	<content><![CDATA[
+function _init()
+ ${1:-- init code}
+end
+
+function _update60()
+ ${2:-- update code}
+end
+
+function _draw()
+ ${3:${SELECTION/^$/-- draw code/}}
+end
+]]></content>
+	<tabTrigger>mainloop</tabTrigger>
+	<scope>source.p8 source.lua - string - comment</scope>
+	<description>mainloop functions</description>
+</snippet>

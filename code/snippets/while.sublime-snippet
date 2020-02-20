@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+while ${1:true} do
+ ${0:${SELECTION/^$/-- code/}}
+end
+]]></content>
+	<tabTrigger>while</tabTrigger>
+	<scope>source.p8 source.lua - string - comment</scope>
+	<description>while true do</description>
+</snippet>

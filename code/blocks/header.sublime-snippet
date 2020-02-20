@@ -1,9 +1,0 @@
-<snippet>
-	<content><![CDATA[
--- ${1:title}
--- ${2:author}
-]]></content>
-	<tabTrigger>head</tabTrigger>
-	<scope>source.p8</scope>
-	<description>cart header</description>
-</snippet>

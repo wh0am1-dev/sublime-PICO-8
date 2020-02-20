@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+function _init()
+ ${1:-- init code}
+end
+]]></content>
+	<tabTrigger>init</tabTrigger>
+	<scope>source.p8 source.lua - string - comment</scope>
+	<description>_init()</description>
+</snippet>

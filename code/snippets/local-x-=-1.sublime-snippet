@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+local ${1:${SELECTION/^$/x/}} = ${0:1}
+]]></content>
+	<tabTrigger>local</tabTrigger>
+	<scope>source.p8 source.lua - string - comment</scope>
+	<description>local x = 1</description>
+</snippet>

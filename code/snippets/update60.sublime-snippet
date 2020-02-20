@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+function _update60()
+ ${1:${SELECTION/^$/-- update code/}}
+end
+]]></content>
+	<tabTrigger>update</tabTrigger>
+	<scope>source.p8 source.lua - string - comment</scope>
+	<description>_update60()</description>
+</snippet>

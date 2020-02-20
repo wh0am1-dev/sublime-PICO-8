@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+for ${1:k}, ${2:v} in pairs( ${3:table} ) do
+ ${0:${SELECTION/^$/-- loop body/}}
+end
+]]></content>
+	<tabTrigger>forp</tabTrigger>
+	<scope>source.p8 source.lua - string - comment</scope>
+	<description>for k, v in pairs()</description>
+</snippet>

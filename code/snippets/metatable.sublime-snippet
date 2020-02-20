@@ -1,0 +1,26 @@
+<snippet>
+	<content><![CDATA[
+${1:mt}={}
+function ${1:mt}.__index(t,k) end
+function ${1:mt}.__newindex(t,k,v) end
+${1:mt}.__mode="k"
+function ${1:mt}.__call() end
+${1:mt}.__metatable={}
+function ${1:mt}.__tostring(t) end
+function ${1:mt}.__len(t) end
+function ${1:mt}.__unm(a) end
+function ${1:mt}.__add(a,b) end
+function ${1:mt}.__sub(a,b) end
+function ${1:mt}.__mul(a,b) end
+function ${1:mt}.__div(a,b) end
+function ${1:mt}.__mod(a,b) end
+function ${1:mt}.__pow(a,b) end
+function ${1:mt}.__concat(a,b) end
+function ${1:mt}.__eq(a,b) end
+function ${1:mt}.__lt(a,b) end
+function ${1:mt}.__le(a,b) end
+]]></content>
+	<tabTrigger>mt</tabTrigger>
+	<scope>source.p8 source.lua - string - comment</scope>
+	<description>metatable</description>
+</snippet>

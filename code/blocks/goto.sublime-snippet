@@ -1,9 +1,0 @@
-<snippet>
-	<content><![CDATA[
-::${1:label}::
-goto ${1:label}
-]]></content>
-	<tabTrigger>goto</tabTrigger>
-	<scope>source.p8</scope>
-	<description>goto</description>
-</snippet>

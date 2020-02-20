@@ -1,15 +1,25 @@
-# PICO-8 v0.1.10 API
+# PICO-8 v0.1.12c API
 
 _draw
+_get_menu_item_selected
 _init
+_mark_cpu
+_menuitem
+_set_fps
+_set_mainloop_exists
+_set_paused
+_startframe
 _update
 _update60
+_update_buttons
+_update_framerate
 abs
 add
 all
 assert
 atan2
 band
+bbsreq
 bnot
 bor
 btn
@@ -38,6 +48,7 @@ exit
 export
 extcmd
 fget
+fillp
 flip
 flr
 folder
@@ -53,6 +64,7 @@ keyconfig
 line
 load
 ls
+lshr
 map
 mapdraw
 max
@@ -69,19 +81,29 @@ pairs
 pal
 palt
 peek
+peek2
+peek4
 pget
 poke
+poke2
+poke4
 print
 printh
 pset
+radio
 reboot
 rect
 rectfill
 reload
 resume
 rnd
+rotl
+rotr
 run
 save
+scoresub
+serial
+set_draw_slice
 setmetatable
 sfx
 sget
@@ -99,5 +121,7 @@ sspr
 stat
 sub
 time
+tonum
+tostr
 type
 yield

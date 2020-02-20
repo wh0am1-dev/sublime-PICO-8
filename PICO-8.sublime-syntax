@@ -1,0 +1,204 @@
+%YAML 1.2
+---
+name: PICO-8 # by sparr
+comment: "PICO-8 (lua syntax 0.9)"
+file_extensions:
+  - p8
+first_line_match: 'pico-8 cartridge // http://www\.pico-8\.com'
+scope: source.p8
+
+variables:
+  hexdigit: '[a-fA-F\d]'
+  hexnumber: '0[xX](?:{{hexdigit}}+\.?{{hexdigit}}{0,4}|\.{{hexdigit}}+)'
+  decnumber: '(?:\d+\.?\d*|\.\d+)(?:[eE][+-]?\d+)'
+  number: '(?<![\d.])(?:{{hexnumber}}|{{decnumber}}?)'
+  identifier: '(?<![[:alnum:]_])[[:alpha:]_][[:alnum:]_]*(?![[:alnum:]_])'
+contexts:
+  main:
+    - match: '^pico-8 cartridge \/\/ (http:\/\/www.pico-8.com)$'
+      scope: entity.name.tag.doctype
+      captures:
+        1: markup.underline.link
+    - match: '^version (\d+)$'
+      scope: entity.name.tag.doctype
+    - match: '^__(?:gfx|label)__$'
+      scope: meta.toc-list
+      push: graphical_block
+    - match: '^__lua__$'
+      scope: meta.toc-list
+      push: lua_block
+    - match: '^__(?:gff|lua|map|music|sfx)__$'
+      scope: meta.toc-list
+  lua_block:
+    - meta_content_scope: source.lua pico8.block.lua
+    - match: '\b((function))\b'
+      scope: storage.type.function
+      captures:
+        1: storage.type.function
+        2: keyword.declaration.function
+      push: function_def
+    - match: '{{number}}'
+      scope: constant.numeric.lua
+    - match: "'"
+      scope: punctuation.definition.string.begin.lua
+      push: string_quoted_single
+    - match: '"'
+      scope: punctuation.definition.string.begin.lua
+      push: string_quoted_double
+    - match: '(?<!--)\[(=*)\['
+      scope: punctuation.definition.string.begin.lua
+      push: string_quoted_multiline
+    - match: '--\[(=*)\['
+      scope: punctuation.definition.comment.lua
+      push: comment_block
+    - match: '(--)(>8)$\n?'
+      scope: comment.line.double-dash.editor-tab.lua
+      captures:
+        1: punctuation.definition.comment.lua
+        2: meta.toc-list # maybe not useful since the text is always the same ">8" for pico8 editor tabs
+    - match: '(--)(?!\[\[).*$\n?'
+      scope: comment.line.double-dash.lua
+      captures:
+        1: punctuation.definition.comment.lua
+    - match: '\b(local)\b'
+      scope: keyword.lua storage.modifier
+    - match: '(?<![:alpha:])(break|do|else|for|in|if|elseif|return|then|repeat|while|until|end|local|in|goto)\b'
+      scope: keyword.control.flow.lua
+    - match: '(?<![^.]\.|:)\b(false|nil|true)\b'
+      scope: constant.language.lua
+    - match: '(?<![^.]\.|:)\b(self)\b'
+      scope: variable.language.self.lua
+    - match: '(?<![^.]\.|:)\b(?:_draw|_init|_update|_update60)\b'
+      scope: support.function.mainloop.lua
+    - match: '(?<![^.]\.|:)\b(?:_get_menu_item_selected|_mark_cpu|_menuitem|_set_fps|_set_mainloop_exists|_set_paused|_startframe|_update_buttons|_update_framerate)\b'
+      scope: support.function.undocumented.lua
+    - match: '(?<![^.]\.|:)\b(?:count|mapdraw)\b'
+      scope: support.function.deprecated.lua
+    - match: '(?<![^.]\.|:)\b(?:add|all|del|foreach|menuitem|)\b'
+      scope: support.function.header.lua
+    - match: '(?<![^.]\.|[^:]:)\b(?:abs|assert|atan2|band|bnot|bor|btn|btnp|bxor|camera|cartdata|cd|circ|circfill|clip|cls|cocreate|color|coresume|cos|costatus|count|cstore|cursor|dget|dir|dset|exit|export|extcmd|fget|flip|flr|folder|fset|help|holdframe|import|info|install_demos|install_games|keyconfig|line|load|ls|map|mapdraw|max|memcpy|memset|mget|mid|min|mkdir|mset|music|pairs|pal|palt|peek|pget|poke|print|printh|pset|reboot|rect|rectfill|reload|resume|rnd|run|save|setmetatable|sfx|sget|sgn|shl|shr|shutdown|sin|splore|spr|sqrt|srand|sset|sspr|stat|sub|time|type|yield)\b'
+      scope: support.function.builtin.lua
+    - match: \b(and|or|not)\b
+      scope: keyword.operator.word.lua keyword.operator.logical.lua
+    - match: '==|[~!]=|<=?|>=?'
+      scope: keyword.operator.comparison.lua
+    - match: '(?:\+|-|%|\*|\/)?=' # might need trailing (?!=)
+      scope: keyword.operator.assignment.lua
+    - match: '\+|-|%|\*|\/|\^'
+      scope: keyword.operator.arithmetic.lua
+    - match: '#|(?<!\.)\.{2}(?!\.)'
+      scope: keyword.operator.lua
+    - match: '::{{identifier}}::'
+      scope: entity.name.label.lua
+    - match: '({{identifier}}[.:])*({{identifier}})\s*(?=\(|\"|''|\[(\=*)\[|\{)'
+      captures:
+        2: variable.function.lua
+    - match: '[\[\]\.:]' # TODO narrow this down a lot
+      scope: punctuation.accessor
+    - match: '\('
+      scope: punctuation.section.parens.begin
+      push:
+        - meta_content_scope: meta.parens
+        - include: lua_block
+    - match: '\)'
+      scope: punctuation.section.parens.end
+      pop: true
+    - match: '\{'
+      scope: punctuation.section.braces.begin
+      push:
+        - meta_content_scope: meta.braces
+        - include: lua_block
+    - match: '\}'
+      scope: punctuation.section.braces.end
+      pop: true
+    - include: block_end
+    - match: '{{identifier}}'
+      scope: variable.other
+  function_def:
+    - meta_scope: meta.function.lua
+    - match: '({{identifier}})([.:])'
+      captures:
+        1: entity.name.function.scope.lua
+        2: punctuation.accessor.lua
+    - match: '{{identifier}}(?![.:])'
+      scope: entity.name.function.lua
+    - match: '\('
+      scope: punctuation.definition.parameters.begin.lua
+      set: function_def_args
+  function_def_args:
+    - meta_scope: meta.function.parameters.lua
+    - match: '[^),\s]*'
+      scope: variable.parameter.function.lua
+    - match: '\)'
+      scope: punctuation.definition.parameters.end.lua
+      pop: true
+  string_quoted_single:
+    - meta_scope: string.quoted.single.lua
+    - include: string
+    - match: "'"
+      scope: punctuation.definition.string.end.lua
+      pop: true
+  string_quoted_double:
+    - meta_scope: string.quoted.double.lua
+    - include: string
+    - match: '"'
+      scope: punctuation.definition.string.end.lua
+      pop: true
+  string_quoted_multiline:
+    - meta_scope: string.quoted.other.multiline.lua
+    - include: string
+    - match: '\]\1\]'
+      scope: punctuation.definition.string.end.lua
+      pop: true
+  comment_block:
+    - meta_scope: comment.block.lua
+    - match: '\]\1\]'
+      scope: punctuation.definition.comment.end.ua
+      pop: true
+  string:
+    - match: '\\([abfnrtv\\"'']|\r?\n|\n\r?|\d\d?\d?)'
+      scope: constant.character.escape.lua
+    - match: '\\[xX][0-9a-fA-F][0-9a-fA-F]'
+      scope: constant.character.escape.lua
+    - match: '\\u\{[0-9a-fA-F]{,7}\}'
+      scope: constant.character.escape.lua
+  block_end:
+    - match: '(?=^__(?:gff|gfx|label|lua|map|music|sfx)__$)'
+      pop: true
+  graphical_block:
+    - meta_content_scope: pico8.block.graphical
+    - match: (?=__)
+      pop: true
+    - match: "0"
+      scope: pico8.gfx.digit.0
+    - match: "1"
+      scope: pico8.gfx.digit.1
+    - match: "2"
+      scope: pico8.gfx.digit.2
+    - match: "3"
+      scope: pico8.gfx.digit.3
+    - match: "4"
+      scope: pico8.gfx.digit.4
+    - match: "5"
+      scope: pico8.gfx.digit.5
+    - match: "6"
+      scope: pico8.gfx.digit.6
+    - match: "7"
+      scope: pico8.gfx.digit.7
+    - match: "8"
+      scope: pico8.gfx.digit.8
+    - match: "9"
+      scope: pico8.gfx.digit.9
+    - match: "[aA]"
+      scope: pico8.gfx.digit.a
+    - match: "[bB]"
+      scope: pico8.gfx.digit.b
+    - match: "[cC]"
+      scope: pico8.gfx.digit.c
+    - match: "[dD]"
+      scope: pico8.gfx.digit.d
+    - match: "[eE]"
+      scope: pico8.gfx.digit.e
+    - match: "[fF]"
+      scope: pico8.gfx.digit.f
+    - include: block_end

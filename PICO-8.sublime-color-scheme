@@ -1,0 +1,239 @@
+{
+    "name": "PICO-8",
+    "author": "Sparr and Overkill",
+    "variables":
+    {
+        // PICO-8 palette and UI colors
+        "pico8_background": "hsl(224, 48%, 22%)",
+        "pico8_palette_0_0_black": "hsl(0, 0%, 0%)",
+        "pico8_palette_1_1_darkblue": "hsl(216, 68%, 19%)",
+        "pico8_palette_2_2_darkred": "hsl(329, 55%, 32%)",
+        "pico8_palette_3_3_darkgreen": "hsl(156, 100%, 26%)",
+        "pico8_palette_4_4_brown": "hsl(14, 52%, 44%)",
+        "pico8_palette_5_5_darkgray": "hsl(30, 9%, 34%)",
+        "pico8_palette_6_6_lightgray": "hsl(228, 4%, 77%)",
+        "pico8_palette_7_7_white": "hsl(23, 100%, 95%)",
+        "pico8_palette_8_8_red": "hsl(342, 100%, 50%)",
+        "pico8_palette_9_9_orange": "hsl(38, 100%, 50%)",
+        "pico8_palette_A_10_yellow": "hsl(55, 100%, 58%)",
+        "pico8_palette_B_11_green": "hsl(134, 100%, 45%)",
+        "pico8_palette_C_12_blue": "hsl(203, 100%, 58%)",
+        "pico8_palette_D_13_purple": "hsl(261, 16%, 54%)",
+        "pico8_palette_E_14_pink": "hsl(338, 100%, 73%)",
+        "pico8_palette_F_15_peach": "hsl(24, 100%, 83%)",
+    	// Palette colors shifted +/- 20% Value, half saturation
+        // Intended to be usd as foreground colors on palette backgrounds
+        "pico8_palette_0_0_valueshift": "hsl(0, 0%, 20%)",
+        "pico8_palette_1_1_valueshift": "hsl(216, 34%, 39%)",
+        "pico8_palette_2_2_valueshift": "hsl(329, 27%, 52%)",
+        "pico8_palette_3_3_valueshift": "hsl(156, 50%, 46%)",
+        "pico8_palette_4_4_valueshift": "hsl(14, 26%, 64%)",
+        "pico8_palette_5_5_valueshift": "hsl(30, 4%, 54%)",
+        "pico8_palette_6_6_valueshift": "hsl(228, 2%, 57%)",
+        "pico8_palette_7_7_valueshift": "hsl(23, 50%, 75%)",
+        "pico8_palette_8_8_valueshift": "hsl(342, 50%, 70%)",
+        "pico8_palette_9_9_valueshift": "hsl(38, 50%, 70%)",
+        "pico8_palette_A_10_valueshift": "hsl(55, 50%, 38%)",
+        "pico8_palette_B_11_valueshift": "hsl(134, 50%, 65%)",
+        "pico8_palette_C_12_valueshift": "hsl(203, 50%, 38%)",
+        "pico8_palette_D_13_valueshift": "hsl(261, 8%, 74%)",
+        "pico8_palette_E_14_valueshift": "hsl(338, 50%, 53%)",
+        "pico8_palette_F_15_valueshift": "hsl(24, 50%, 63%)",
+        // Other colors
+        "gray75": "hsl(0, 0%, 75%)",
+        "gray25": "hsl(0, 0%, 25%)",
+    },
+    "globals":
+    {
+        "foreground": "var(pico8_palette_6_6_lightgray)",
+        "background": "var(pico8_background)",
+        "caret": "var(pico8_palette_8_8_red)",
+        "invisibles": "var(gray75)",
+        "line_highlight": "var(gray25)",
+        "selection": "var(pico8_palette_A_10_yellow)"
+    },
+    "rules":
+    [
+        {
+            "name": "Source",
+            "scope": "source",
+            "background": "var(pico8_background)"
+        },
+        {
+            "name": "Comment",
+            "scope": "comment",
+            "foreground": "var(pico8_palette_D_13_purple)"
+        },
+        {
+            "name": "Keyword",
+            "scope": "keyword, storage",
+            "foreground": "var(pico8_palette_E_14_pink)"
+        },
+        {
+            "name": "Keyword operator",
+            "scope": "keyword.operator.logical",
+            "foreground": "var(pico8_palette_E_14_pink)"
+        },
+        {
+            "name": "Keyword operator",
+            "scope": "keyword.operator",
+            "foreground": "var(pico8_palette_7_7_white)"
+        },
+        {
+            "name": "Function (definition)",
+            "scope": "entity.name.function",
+            "foreground": "var(pico8_palette_6_6_lightgray)",
+            "font_style": "bold"
+        },
+        {
+            "name": "Class (definition)",
+            "scope": "entity.name",
+            "foreground": "var(pico8_palette_6_6_lightgray)"
+        },
+        {
+            "name": "Number",
+            "scope": "constant.numeric",
+            "foreground": "var(pico8_palette_C_12_blue)"
+        },
+        {
+            "name": "Variable",
+            "scope": "variable.language, variable.other",
+            "foreground": "var(pico8_palette_6_6_lightgray)",
+            "font_style": "bold"
+        },
+        {
+            "name": "Built-in constant",
+            "scope": "constant.language",
+            "foreground": "var(pico8_palette_C_12_blue)"
+        },
+        {
+            "name": "String",
+            "scope": "string",
+            "foreground": "var(pico8_palette_C_12_blue)"
+        },
+        {
+            "name": "Arrays brackets, Member dots, Method colons",
+            "scope": "punctuation.accessor",
+            "foreground": "var(pico8_palette_7_7_white)",
+            "font_style": "bold"
+        },
+        {
+            "name": "Parentheses",
+            "scope": "punctuation.section.parens",
+            "foreground": "var(pico8_palette_7_7_white)",
+            "font_style": "bold"
+        },
+        {
+            "name": "Braces",
+            "scope": "punctuation.section.braces",
+            "foreground": "var(pico8_palette_7_7_white)"
+        },
+        {
+            "name": "Support function",
+            "scope": "support.function",
+            "foreground": "var(pico8_palette_B_11_green)"
+        },
+        {
+            "name": "pico8 header \"doctype\"",
+            "scope": "source.p8 entity.name.tag.doctype",
+            "foreground": "var(pico8_palette_7_7_white)",
+            "font_style": "bold"
+        },
+        {
+            "name": "GFX digit 0",
+            "scope": "pico8.gfx.digit.0",
+            "foreground": "var(pico8_palette_0_0_valueshift)",
+            "background": "var(pico8_palette_0_0_black)"
+        },
+        {
+            "name": "GFX digit 1",
+            "scope": "pico8.gfx.digit.1",
+            "foreground": "var(pico8_palette_1_1_valueshift)",
+            "background": "var(pico8_palette_1_1_darkblue)"
+        },
+        {
+            "name": "GFX digit 2",
+            "scope": "pico8.gfx.digit.2",
+            "foreground": "var(pico8_palette_2_2_valueshift)",
+            "background": "var(pico8_palette_2_2_darkred)"
+        },
+        {
+            "name": "GFX digit 3",
+            "scope": "pico8.gfx.digit.3",
+            "foreground": "var(pico8_palette_3_3_valueshift)",
+            "background": "var(pico8_palette_3_3_darkgreen)"
+        },
+        {
+            "name": "GFX digit 4",
+            "scope": "pico8.gfx.digit.4",
+            "foreground": "var(pico8_palette_4_4_valueshift)",
+            "background": "var(pico8_palette_4_4_brown)"
+        },
+        {
+            "name": "GFX digit 5",
+            "scope": "pico8.gfx.digit.5",
+            "foreground": "var(pico8_palette_5_5_valueshift)",
+            "background": "var(pico8_palette_5_5_darkgray)"
+        },
+        {
+            "name": "GFX digit 6",
+            "scope": "pico8.gfx.digit.6",
+            "foreground": "var(pico8_palette_6_6_valueshift)",
+            "background": "var(pico8_palette_6_6_lightgray)"
+        },
+        {
+            "name": "GFX digit 7",
+            "scope": "pico8.gfx.digit.7",
+            "foreground": "var(pico8_palette_7_7_valueshift)",
+            "background": "var(pico8_palette_7_7_white)"
+        },
+        {
+            "name": "GFX digit 8",
+            "scope": "pico8.gfx.digit.8",
+            "foreground": "var(pico8_palette_8_8_valueshift)",
+            "background": "var(pico8_palette_8_8_red)"
+        },
+        {
+            "name": "GFX digit 9",
+            "scope": "pico8.gfx.digit.9",
+            "foreground": "var(pico8_palette_9_9_valueshift)",
+            "background": "var(pico8_palette_9_9_orange)"
+        },
+        {
+            "name": "GFX digit a",
+            "scope": "pico8.gfx.digit.a",
+            "foreground": "var(pico8_palette_A_10_valueshift)",
+            "background": "var(pico8_palette_A_10_yellow)"
+        },
+        {
+            "name": "GFX digit b",
+            "scope": "pico8.gfx.digit.b",
+            "foreground": "var(pico8_palette_B_11_valueshift)",
+            "background": "var(pico8_palette_B_11_green)"
+        },
+        {
+            "name": "GFX digit c",
+            "scope": "pico8.gfx.digit.c",
+            "foreground": "var(pico8_palette_C_12_valueshift)",
+            "background": "var(pico8_palette_C_12_blue)"
+        },
+        {
+            "name": "GFX digit d",
+            "scope": "pico8.gfx.digit.d",
+            "foreground": "var(pico8_palette_D_13_valueshift)",
+            "background": "var(pico8_palette_D_13_purple)"
+        },
+        {
+            "name": "GFX digit e",
+            "scope": "pico8.gfx.digit.e",
+            "foreground": "var(pico8_palette_E_14_valueshift)",
+            "background": "var(pico8_palette_E_14_pink)"
+        },
+        {
+            "name": "GFX digit f",
+            "scope": "pico8.gfx.digit.f",
+            "foreground": "var(pico8_palette_F_15_valueshift)",
+            "background": "var(pico8_palette_F_15_peach)"
+        }
+    ]
+}

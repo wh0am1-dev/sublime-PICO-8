@@ -1,0 +1,15 @@
+<snippet>
+	<content><![CDATA[
+-- poke(0x5f2c,0) -- standard, 128x128
+-- poke(0x5f2c,1) -- horizontal stretch, 64x128
+-- poke(0x5f2c,2) -- vertical stretch, 128x64
+-- poke(0x5f2c,3) -- zoomed, 64x64
+-- poke(0x5f2c,4) -- standard, 128x128
+-- poke(0x5f2c,5) -- mirror left half
+-- poke(0x5f2c,6) -- mirror top half
+-- poke(0x5f2c,7) -- mirror top-left quarter
+]]></content>
+	<tabTrigger>ghack</tabTrigger>
+	<scope>source.p8 source.lua - string - comment</scope>
+	<description>graphics hack</description>
+</snippet>

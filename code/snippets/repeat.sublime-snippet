@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+repeat
+ ${0:${SELECTION/^$/-- code/}}
+until ${1:false}
+]]></content>
+	<tabTrigger>repeat</tabTrigger>
+	<scope>source.p8 source.lua - string - comment</scope>
+	<description>repeat until false</description>
+</snippet>

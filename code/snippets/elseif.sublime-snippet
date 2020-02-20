@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+elseif ${1:foo} then
+ ${0:${SELECTION/^$/-- code/}}
+${2:end}
+]]></content>
+	<tabTrigger>elseif</tabTrigger>
+	<scope>source.p8 source.lua - string - comment</scope>
+	<description>elseif x then</description>
+</snippet>

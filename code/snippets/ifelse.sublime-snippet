@@ -1,0 +1,12 @@
+<snippet>
+	<content><![CDATA[
+if ${1:condition} then
+ ${2:${SELECTION/^$/-- code/}}
+else
+ ${3:-- else code}
+end
+]]></content>
+	<tabTrigger>ifelse</tabTrigger>
+	<scope>source.p8 source.lua - string - comment</scope>
+	<description>if-else</description>
+</snippet>
