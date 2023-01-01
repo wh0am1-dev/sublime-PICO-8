@@ -12,6 +12,7 @@ The color schemes can also be used for Sublime Text in general if you want a Pic
 Changelog
 =========
 
+- changed: syntax highlighting updated for Pico-8 0.2.25e
 - removed: TextMate theme and syntax files
 - added: Sublime Text 3 theme and syntax files
 - added: section headers and code tab comments are highlighted

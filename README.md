@@ -8,6 +8,7 @@ This package includes:
 
 - `.p8` language definition (by [Overkill](http://www.lexaloffle.com/bbs/?uid=11331)).
 - Syntax highlighting (by [Overkill](http://www.lexaloffle.com/bbs/?uid=11331)).
+- Sprite sheet syntax highlighting (by [Adam Norberg](https://github.com/AdamNorberg)).
 - PICO-8 `.ttf` font (by [RhythmLynx](http://www.lexaloffle.com/bbs/?uid=11704)).
 - Cartridge runner to launch your cart right from Sublime Text.
 - Code completion based on the official [PICO-8 API](http://neko250.github.io/pico8-api/).
@@ -92,6 +93,13 @@ __IMPORTANT__: Remember using the escape character for the backslash (`\\`) inst
 ----
 
 ## Version History
+
+- __v2022.12.31__:
+	- `changed`: syntax highlighting updated for Pico-8 0.2.25e
+	- `removed`: TextMate theme and syntax files
+	- `added`: Sublime Text 3 theme and syntax files
+	- `added`: section headers and code tab comments are highlighted
+	- `added`: individual pixels of the sprite sheet and label are colored to match the P8 palette, making the sprites visible
 
 - __v2017.3.14__:
 	- `added`: automatically lowercase the file upon saving.
