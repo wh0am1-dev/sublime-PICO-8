@@ -40,10 +40,10 @@
     "globals":
     {
         "foreground": "var(p0x6_grey)",
-        "background": "var(p0x1_dkblue)",
+        "background": "var(p0x5_dkgrey)",
         "caret": "var(p0x8_red)",
         "invisibles": "var(p0x0_black)",
-        "line_highlight": "var(p0x81_navy)",
+        "line_highlight": "var(p0x85_dkmauve)",
         "selection": "var(p0xa_yellow)"
     },
     "rules":
