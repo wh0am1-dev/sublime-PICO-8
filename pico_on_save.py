@@ -3,9 +3,12 @@ import sublime_plugin
 
 class PicoToLower(sublime_plugin.TextCommand):
 	def run(self, edit):
-		upper = self.view.find_all("[A-Z]+")
+		upper = self.view.find_all("(_ENV)|([A-Z]+)")
 		for region in upper:
-			self.view.replace(edit, region, self.view.substr(region).lower())
+			s = self.view.substr(region)
+			if s == "_ENV" or self.view.score_selector(region.a, "string") > 0:
+				continue
+			self.view.replace(edit, region, s.lower())
 
 class PicoOnSave(sublime_plugin.EventListener):
 	def on_pre_save(self, view):
