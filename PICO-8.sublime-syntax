@@ -46,7 +46,7 @@ contexts:
           captures:
             0: punctuation.definition.string.end.lua
           pop: true
-        - match: \\.
+        - match: "\\([abfnrtv\"']|\\r?\\n|\\n\\r?|\\d\\d?\\d?|[xX][0-9a-fA-F]{2})"
           scope: constant.character.escape.lua
     - match: '(?<!--)\[(=*)\['
       captures:
