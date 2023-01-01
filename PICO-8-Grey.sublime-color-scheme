@@ -170,7 +170,7 @@
         {
             "name": "Source",
             "scope": "source",
-            "background": "var(p0x1_dkblue)"
+            "background": "var(p0x5_dkgrey)"
         },
         {
             "name": "Comment",
