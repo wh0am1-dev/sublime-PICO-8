@@ -1,0 +1,131 @@
+%YAML 1.2
+---
+# http://www.sublimetext.com/docs/syntax.html
+name: PICO-8
+comment: PICO-8 (0.2.5e)
+file_extensions:
+  - p8
+scope: source.p8
+contexts:
+  main:
+    - match: '^__gfx__\s*$'
+      scope: keyword.other.sector
+      set: sprite
+    - match: '^__lua__\s*$'
+      scope: keyword.other.sector
+    - match: '^-->8\s*$'
+      scope: comment.line.pico8.tab
+    - match: '\b(function)\s+([a-zA-Z_.:]+[.:])?([a-zA-Z_]\w*)\s*(\()([^)]*)(\))'
+      scope: meta.function.lua
+      captures:
+        1: keyword.control.lua
+        2: entity.name.function.scope.lua
+        3: entity.name.function.lua
+        4: punctuation.definition.parameters.begin.lua
+        5: variable.parameter.function.lua
+        6: punctuation.definition.parameters.end.lua
+    - match: '(?<![\d.])\b0x[a-fA-F\d]+|\b\d+(\.\d+)?([eE]-?\d+)?|\.\d+([eE]-?\d+)?'
+      scope: constant.numeric.lua
+    - match: "'"
+      captures:
+        0: punctuation.definition.string.begin.lua
+      push:
+        - meta_scope: string.quoted.single.lua
+        - match: "'"
+          captures:
+            0: punctuation.definition.string.end.lua
+          pop: true
+        - match: \\.
+          scope: constant.character.escape.lua
+    - match: '"'
+      captures:
+        0: punctuation.definition.string.begin.lua
+      push:
+        - meta_scope: string.quoted.double.lua
+        - match: '"'
+          captures:
+            0: punctuation.definition.string.end.lua
+          pop: true
+        - match: "\\\\([abfnrtv\"']|\\r?\\n|\\n\\r?|\\d\\d?\\d?|[xX][0-9a-fA-F]{2})"
+          scope: constant.character.escape.lua
+    - match: '(?<!--)\[(=*)\['
+      captures:
+        0: punctuation.definition.string.begin.lua
+      push:
+        - meta_scope: string.quoted.other.multiline.lua
+        - match: '\]\1\]'
+          captures:
+            0: punctuation.definition.string.end.lua
+          pop: true
+    - match: '--\[(=*)\['
+      captures:
+        0: punctuation.definition.comment.lua
+      push:
+        - meta_scope: comment.block.lua
+        - match: '\]\1\]'
+          captures:
+            0: punctuation.definition.comment.lua
+          pop: true
+    - match: '(--)(?!\[\[).*$\n?'
+      scope: comment.line.double-dash.lua
+      captures:
+        1: punctuation.definition.comment.lua
+    - match: \b(break|do|else|for|if|elseif|return|then|repeat|while|until|end|function|local|in|goto)\b
+      scope: keyword.control.lua
+    - match: '(?<![^.]\.|:)\b(false|nil|true)\b'
+      scope: constant.language.lua
+    - match: '(?<![^.]\.|:)\b(self)\b'
+      scope: variable.language.self.lua
+    - match: '(?<![^.]\.|:)\b(_draw|_init|_update|_update60|abs|add|all|assert|atan2|band|bnot|bor|btn|btnp|bxor|camera|cartdata|cd|ceil|circ|circfill|clip|cls|cocreate|color|coresume|cos|costatus|count|cstore|cursor|del|deli|dget|dir|dset|exit|export|extcmd|fget|fillp|flip|flr|folder|foreach|fset|getmetatable|help|holdframe|import|info|install_demos|install_games|ipairs|keyconfig|line|load|ls|lshr|map|mapdraw|max|memcpy|memset|menuitem|mget|mid|min|mkdir|mset|music|next|ord|oval|ovalfill|pack|pairs|pal|palt|peek|peek2|peek4|pget|poke|poke2|poke4|print|printh|pset|rawequal|rawget|rawlen|rawset|reboot|rect|rectfill|reload|resume|rnd|run|rotl|rotr|save|select|serial|setmetatable|sfx|sget|sgn|shl|shr|shutdown|sin|split|splore|spr|sqrt|srand|sset|sspr|stat|stop|sub|t|time|tline|tonum|tostr|trace|type|unpack|yield)\b'
+      scope: support.function.lua
+    - match: \b(and|or|not)\b
+      scope: keyword.operator.lua
+    - match: '\(|\)|\;|\+=?|-=?|%=?|#|@|$|\*=?|\/=?|\\=?|\^=?|\[|\]|==?|~=|!=|<=?|>=?|,|\.\.?\.?|<<>?|>>>?|>><|(?<!\.)\.{2}(?!\.)'
+      scope: keyword.operator.punctuation.lua
+
+  sprite:
+    - match: '^__label__\s*'
+      scope: keyword.other.sector
+    - match: '^__gff__\s*'
+      scope: keyword.other.sector
+      set: otherData
+    - match: '0'
+      scope: constant.numeric.integer.hexadecimal.lua.pico8.color.0
+    - match: '1'
+      scope: constant.numeric.integer.hexadecimal.lua.pico8.color.1
+    - match: '2'
+      scope: constant.numeric.integer.hexadecimal.lua.pico8.color.2
+    - match: '3'
+      scope: constant.numeric.integer.hexadecimal.lua.pico8.color.3
+    - match: '4'
+      scope: constant.numeric.integer.hexadecimal.lua.pico8.color.4
+    - match: '5'
+      scope: constant.numeric.integer.hexadecimal.lua.pico8.color.5
+    - match: '6'
+      scope: constant.numeric.integer.hexadecimal.lua.pico8.color.6
+    - match: '7'
+      scope: constant.numeric.integer.hexadecimal.lua.pico8.color.7
+    - match: '8'
+      scope: constant.numeric.integer.hexadecimal.lua.pico8.color.8
+    - match: '9'
+      scope: constant.numeric.integer.hexadecimal.lua.pico8.color.9
+    - match: 'a|A'
+      scope: constant.numeric.integer.hexadecimal.lua.pico8.color.a
+    - match: 'b|B'
+      scope: constant.numeric.integer.hexadecimal.lua.pico8.color.b
+    - match: 'c|C'
+      scope: constant.numeric.integer.hexadecimal.lua.pico8.color.c
+    - match: 'd|D'
+      scope: constant.numeric.integer.hexadecimal.lua.pico8.color.d
+    - match: 'e|E'
+      scope: constant.numeric.integer.hexadecimal.lua.pico8.color.e
+    - match: 'f|F'
+      scope: constant.numeric.integer.hexadecimal.lua.pico8.color.f
+
+  otherData:
+    - match: '^(__gff__|__map__|__sfx__|__music__)\s*$'
+      scope: keyword.other.sector
+    - match: '[0-9a-fA-F\s]'
+      scope: constant.numeric.integer.hexadecimal.lua.pico8.data
+    - match: '.'
+      scope: invalid.illegal

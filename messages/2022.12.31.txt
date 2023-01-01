@@ -1,0 +1,19 @@
+Sublime PICO-8 v2022.12.31
+
+Pico-8 syntax highlighting and the Pico-8 color scheme now use Sublime Text 3 format.
+
+Syntax highlighting is now updated to match Pico-8 0.2.25e, including using the blue background. Additionally, comments to break code into tabs in the Pico-8 editor are highlighted (using the colors of the P8 editor tab bar), as are markers between segments in the .p8 file. Finally, the __gfx__ segment (the sprite sheet) and the __label__ segment (the cartridge label) are colored character-by-character to match the Pico-8 palette, so the sprite sheet can be (sort of) viewed in Sublime Text!
+
+A gray variant of the color scheme is available; you can specify this in your Pico-8 user settings:
+"color_scheme": "Packages/PICO-8/PICO-8.sublime-color-scheme"
+
+The color schemes can also be used for Sublime Text in general if you want a Pico-8 feel to all your work!
+
+Changelog
+=========
+
+- changed: syntax highlighting updated for Pico-8 0.2.25e
+- removed: TextMate theme and syntax files
+- added: Sublime Text 3 theme and syntax files
+- added: section headers and code tab comments are highlighted
+- added: individual pixels of the sprite sheet and label are colored to match the P8 palette, making the sprites visible
