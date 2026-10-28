@@ -93,6 +93,11 @@ __IMPORTANT__: Remember using the escape character for the backslash (`\\`) inst
 
 ## Version History
 
+- __v2026.10.28__:
+	- `changed`: updated docs and bbs links.
+	- `fixed`: typeerror on unsaved tab.
+	- `fixed`: report undefined pico8 path on cartridge run.
+
 - __v2017.3.14__:
 	- `added`: automatically lowercase the file upon saving.
 	- `added`: `extcmd` function (syntax and autocomplete).
