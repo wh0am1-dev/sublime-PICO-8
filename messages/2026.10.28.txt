@@ -1,0 +1,8 @@
+Sublime PICO-8 v2026.10.28
+
+Changelog
+=========
+
+- changed: updated docs and bbs links.
+- fixed: typeerror on unsaved tab.
+- fixed: report undefined pico8 path on cartridge run.
