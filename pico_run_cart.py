@@ -13,6 +13,10 @@ class PicoRunCartCommand(sublime_plugin.TextCommand):
 			sublime.error_message("Error: \"pico-8_path\" is not defined !\n\nRun \"PICO-8: Setup Path\" from the Command Palette.")
 			return
 
+		if not self.view.file_name():
+			sublime.error_message("Save the cartridge first")
+			return
+
 		cart = "\"" + self.view.file_name() + "\""
 		self.cmd = pico8 + " -run " + cart
 		threading.Thread(target=target).start()
