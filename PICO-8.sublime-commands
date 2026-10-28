@@ -7,11 +7,11 @@
 }, {
 	"caption": "PICO-8: Browse BBS",
 	"command": "open_url",
-	"args": { "url": "http://www.lexaloffle.com/bbs/?cat=7" }
+	"args": { "url": "https://www.lexaloffle.com/bbs/?cat=7" }
 }, {
 	"caption": "PICO-8: Browse API Reference",
 	"command": "open_url",
-	"args": { "url": "http://neko250.github.io/pico8-api" }
+	"args": { "url": "https://carlos-aguilar.com/pico8-api" }
 }, {
 	"caption": "PICO-8: Download Font",
 	"command": "open_url",
